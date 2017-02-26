@@ -1,0 +1,14 @@
+.line-bottom:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    left: 0;
+    top: 0;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    -webkit-transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    background-color: #b7b7b7;
+    height: 1px;
+    z-index: 10;
+}
