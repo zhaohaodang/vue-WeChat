@@ -156,14 +156,6 @@ input {
     overflow: hidden;
 }
 
-.sans {
-    font-family: 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', STHeiti, \534E\6587\7EC6\9ED1, SimHei, Helvetica, Arial, sans-serif;
-}
-
-.smallSans {
-    font-family: 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', STHeiti, \534E\6587\7EC6\9ED1, SimSun, Helvetica, Arial, sans-serif;
-}
-
 .none {
     display: none;
 }

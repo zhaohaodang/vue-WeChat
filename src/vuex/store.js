@@ -67,6 +67,81 @@ const state = {
                     "name": "赵浩荡"
                 }],
                 "user": [getUserInfo('wxid_zhaohd02')]
+            },
+            {
+                "mid": 5,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
+            },
+             {
+                "mid": 6,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
+            },
+             {
+                "mid": 7,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd01')]
+            },
+             {
+                "mid": 5,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
+            },
+             {
+                "mid": 5,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
             }
         ]
     }

@@ -103,8 +103,8 @@
             }
         },
         methods: {},
-        mounted: function() {
-            console.log(this.$store.state.msgList.baseMsg[0].user);
+        mounted() {
+
         }
     }
 </script>

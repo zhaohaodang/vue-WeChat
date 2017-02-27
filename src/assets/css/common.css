@@ -28,11 +28,14 @@
 }
 
 .app-content {
-    padding-top: 45px;
+   padding-top: 45px;
     padding-bottom: 50px;
-    overflow: hidden;
-    position: relative;
+    overflow: auto;
+    /* position: relative; */
     height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 
 .app-footer {
@@ -40,7 +43,7 @@
     left: 0 !important;
     width: 100%;
     position: absolute;
-    z-index: 3;
+    z-index: 15;
 }
 
 .app-footer:not(:first-child)::before {
@@ -55,7 +58,7 @@
     -webkit-transform-origin: 0 0;
     background-color: #b7b7b7;
     height: 1px;
-    z-index: 10;
+    z-index: 15;
 }
 
 .new-msg-count {
@@ -75,4 +78,14 @@
     text-align: center;
     font-size: 14px;
     background-color: #f43531;
+}
+
+.full-screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #eee;
+    right: 0;
+    left: 0;
+    z-index: 99;
 }

@@ -12,3 +12,6 @@
         }
     }
 </script>
+<style>
+    @import "../../assets/css/contact.css";
+</style>
