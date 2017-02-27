@@ -2,7 +2,7 @@
     content: "";
     position: absolute;
     width: 200%;
-    left: 0;
+    left: 8px;
     top: 0;
     transform: scale(.5);
     transform-origin: 0 0;
@@ -11,4 +11,68 @@
     background-color: #b7b7b7;
     height: 1px;
     z-index: 10;
+}
+
+.app-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    height: 45px;
+    line-height: 45px;
+    font-size: 19px;
+    background: linear-gradient(180deg, #303036, #3c3b40);
+    color: #fff;
+    text-align: center;
+}
+
+.app-content {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.app-footer {
+    bottom: 0;
+    left: 0 !important;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+.app-footer:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    left: 0px;
+    top: 0;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    -webkit-transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    background-color: #b7b7b7;
+    height: 1px;
+    z-index: 10;
+}
+
+.new-msg-count {
+    position: absolute;
+    font-style: normal;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
+    right: -9px;
+    top: -5px;
+    z-index: 2;
+    padding: 0 4px;
+    width: auto;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 9px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f43531;
 }

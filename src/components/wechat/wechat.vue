@@ -4,19 +4,21 @@
     <ul class="wechat-list">
       <li class="list-row line-bottom" v-for="item in $store.state.msgList.baseMsg">
         <div class="list-info" v-swiper>
-          <div class="ico-box">
-            <i class="new-msg-count">1</i>
-            <div class="ico">
-              <img :src="item.iconSrc">
+          <div class="header-box">
+            <i class="new-msg-count" v-show="!item.read">{{item.newMsgCount}}</i>
+            <div class="header" :class="[item.type=='group'?'multi-header':'']">
+              <img v-for="userInfo in item.user" :src="userInfo.headerUrl">
             </div>
           </div>
           <div class="desc-box">
-            <div class="desc-time">{{item.msg[0].date | fmtDate('hh:ss')}}</div>
-            <div class="desc-author">{{item.name}}</div>
+            <div class="desc-time">{{item.msg[item.msg.length-1].date | fmtDate('hh:ss')}}</div>
+            <div class="desc-author" v-if="item.type=='group'">{{item.group_name}}</div>
+            <div class="desc-author" v-else>{{item.user[0].remark||item.user[0].nickname}}</div>
             <div class="desc-msg">
-              <div class="desc-mute"><icon name="bell-slash" scale="0.8"></icon></div>
+              <div class="desc-mute iconfont icon-mute">
+              </div>
               <!--<span></span>-->
-              <span>{{item.msg[0].text}}</span>
+              <span>{{item.msg[item.msg.length-1].text}}</span>
             </div>
           </div>
         </div>
@@ -101,7 +103,9 @@
             }
         },
         methods: {},
-        mounted: function() {}
+        mounted: function() {
+            console.log(this.$store.state.msgList.baseMsg[0].user);
+        }
     }
 </script>
 <style>

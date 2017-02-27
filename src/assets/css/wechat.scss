@@ -28,37 +28,32 @@
                 height: 64px;
                 padding: 8px;
                 background-color: #fff;
-                .ico-box {
+                .header-box {
                     position: relative;
                     float: left;
                     width: 48px;
                     height: 48px;
                     margin-right: 10px;
-                    .new-msg-count {
-                        position: absolute;
-                        font-style: normal;
-                        font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
-                        right: -9px;
-                        top: -5px;
-                        z-index: 2;
-                        padding: 0 4px;
-                        width: auto;
-                        min-width: 18px;
-                        height: 18px;
-                        line-height: 18px;
-                        border-radius: 9px;
-                        color: #fff;
-                        text-align: center;
-                        font-size: 14px;
-                        background-color: #f43531;
-                    }
-                    .ico {
+                    .header {
                         height: 100%;
                         border-radius: 5px;
+                        display: flex;
+                        display: -webkit-flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
                         overflow: hidden;
+                        background: #dddbdb;
                         img {
-                            width: 100%;
+                            width: 10%;
+                            height: auto;
+                            flex-grow: 2;
                             border: 0;
+                        }
+                        &.multi-header {
+                            img {
+                                margin: 1px;
+                            }
                         }
                     }
                 }

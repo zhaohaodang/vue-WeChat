@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import getUserInfo from './user'
 Vue.use(Vuex)
     // 接口域名
 let apiPublicDomain = '//vrapi.snail.com/'
@@ -12,52 +12,61 @@ const state = {
     msgList: {
         StickMsg: [],
         baseMsg: [{
-                "id": 1,
-                "name": "赵浩荡",
-                "nickname": "nick_赵浩荡",
-                "remark": "remark_赵浩荡",
-                "wxid": "wxid_yangtao",
-                "qq": "00001",
-                "email": "00001@qq.com",
-                "type": "friends",
-                "iconSrc": "http://images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg",
-                "qrCode": "",
-                "signature": "个性签名zhaohd",
-                "telphone": 18812345678,
-                "read": false,
-                "newMsgCount": 2,
-                "area": ["中国", "北京", "海淀"],
-                "album": [{
-                    imgSrc: ""
-                }],
-                "msg": [{
-                    "text": 'hello world',
-                    "date": 1488117964495
-                }]
-            },
-            {
-                "id": 2,
-                "name": "赵浩荡2",
-                "nickname": "nick_赵浩荡2",
-                "remark": "remark_赵浩荡2",
-                "wxid": "wxid_yangtao",
-                "qq": "00001",
-                "email": "00001@qq.com",
-                "type": "friends",
-                "iconSrc": "http://images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg",
-                "qrCode": "",
-                "signature": "个性签名zhaohd",
-                "telphone": 18812345678,
+                "mid": 1,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
                 "read": true,
                 "newMsgCount": 1,
-                "area": ["中国", "北京", "海淀"],
-                "album": [{
-                    imgSrc: ""
-                }],
                 "msg": [{
-                    "text": 'nihao',
-                    "date": ""
-                }]
+                    "text": 'nihao1',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd01')]
+            },
+            {
+                "mid": 2,
+                "type": "group",
+                "group_name": "收购万达讨论群",
+                "qrCode": "",
+                "read": false,
+                "newMsgCount": 1,
+                "msg": [{
+                    "text": 'nihao2',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd01'), getUserInfo('wxid_zhaohd02')]
+            },
+            {
+                "mid": 3,
+                "type": "group",
+                "group_name": "收购万达讨论群",
+                "group_qrCode": "",
+                "read": true,
+                "newMsgCount": 1,
+                "msg": [{
+                    "text": 'nihao3',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd01'), getUserInfo('wxid_zhaohd02')]
+            },
+            {
+                "mid": 4,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
             }
         ]
     }
