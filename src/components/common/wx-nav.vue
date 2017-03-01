@@ -9,19 +9,19 @@
         </router-link>
 		<router-link to="/contact" tag="dl">
             <dt class="iconfont icon-contact" >
-                <i class="new-msg-count">2</i>
+                <!--<i class="new-msg-count">2</i>-->
             </dt>
             <dd>通讯录</dd>
         </router-link>
 		<router-link to="/explore" tag="dl">
             <dt class="iconfont icon-find" >
-                <i class="new-msg-count">2</i>
+                <i class="new-msg-dot"></i>
             </dt>
             <dd>发现</dd>
         </router-link>
 		<router-link to="/self" tag="dl">
             <dt class="iconfont icon-me" >
-                <i class="new-msg-count">3</i>
+                <!--<i class="new-msg-dot"></i>-->
             </dt>
             <dd>我</dd>
         </router-link>

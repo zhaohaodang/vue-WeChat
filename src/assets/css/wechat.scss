@@ -2,6 +2,7 @@
     .wechat-list {
         position: relative;
         overflow-x: hidden;
+        z-index: 1;
         .list-row {
             height: 64px;
             position: relative;

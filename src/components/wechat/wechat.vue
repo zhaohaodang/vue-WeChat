@@ -1,6 +1,5 @@
 <template>
   <div id="wechat">
-    <!--<search></search>-->
     <ul class="wechat-list">
       <li class="list-row line-bottom" v-for="item in $store.state.msgList.baseMsg">
         <div class="list-info" v-swiper>
@@ -32,11 +31,14 @@
   </div>
 </template>
 <script>
+    import search from "../common/search"
     export default {
-        name: "",
+        components: {
+            search
+        },
         data() {
             return {
-
+                "pageName": "微信"
             }
         },
         directives: {
@@ -104,7 +106,7 @@
         },
         methods: {},
         mounted() {
-
+            this.$store.commit("setPageName", this.pageName)
         }
     }
 </script>

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,QAAQ;EACP,UAAU,EAAC,GAAG",
+"mappings": "AAAA,QAAQ,CACP,UAAU,CAAC,GAAG",
 "sources": ["contact.scss"],
 "names": [],
 "file": "contact.css"
