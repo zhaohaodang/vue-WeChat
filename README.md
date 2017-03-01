@@ -1,2 +1,2 @@
 # vue-WeChat
-An imitation of WeChat based on the Vue2.0
+An imitation of WeChat based on the Vue2.x
