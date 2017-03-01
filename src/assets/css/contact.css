@@ -1,2 +1,8 @@
-#contact{background:red}
+#contact img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin-right: 10px;
+  border-radius: 4px; }
+
 /*# sourceMappingURL=contact.css.map */

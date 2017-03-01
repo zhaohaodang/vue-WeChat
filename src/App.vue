@@ -5,7 +5,9 @@
     </header>
     <search :class="{'search-open':!$store.state.headerStatus}" v-show="$route.path=='/'||$route.path=='/contact'"></search>
     <section class="app-content">
-      <router-view name="default"></router-view>
+        <keep-alive>
+            <router-view name="default"></router-view>
+        </keep-alive>
     </section>
     <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
       <router-view name="subPage" class="full-screen"></router-view>
@@ -31,16 +33,23 @@
             return {
                 "pageName": "微信",
                 "routerAnimate": false,
-                "enterAnimate": "animated fadeInRight", //animated fadeInRight
-                "leaveAnimate": "animated fadeOutRight" //animated fadeOutRight
+                "enterAnimate": "animated", //animated fadeInRight
+                "leaveAnimate": "animated" //animated fadeOutRight
             }
         },
         watch: {
             "$route" (to, from) {
                 const toDepth = to.path.split('/').length
                 const fromDepth = from.path.split('/').length
+                    // if (toDepth === fromDepth) {
+                    //     return;
+                    // }
                 this.enterAnimate = toDepth > fromDepth ? "animated fadeInRight" : "animated fadeInLeft"
                 this.leaveAnimate = toDepth > fromDepth ? "animated fadeOutLeft" : "animated fadeOutRight"
+                if (toDepth === 3) {
+                    this.leaveAnimate = "animated fadeOutRight"
+                }
+                console.log(this.leaveAnimate)
                 console.log(toDepth > fromDepth ? "进入下一层" : "返回上一层")
             }
         },

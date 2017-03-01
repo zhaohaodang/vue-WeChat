@@ -64,4 +64,15 @@
             }
         }
     }
+    .weui-search-bar__label {
+        transition: 0.3s;
+    }
+    .weui-search-bar_focusing {
+        .weui-search-bar__label {
+            // transition: 0.1s;
+            display: block;
+            transform: translate3d(-100%, 0, 0);
+            opacity: 0.0;
+        }
+    }
 }

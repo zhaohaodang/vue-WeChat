@@ -1,23 +1,19 @@
-.line-bottom:not(:first-child)::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    left: 8px;
-    top: 0;
-    transform: scale(.5);
-    transform-origin: 0 0;
-    -webkit-transform: scale(.5);
-    -webkit-transform-origin: 0 0;
-    background-color: #b7b7b7;
-    height: 1px;
-    z-index: 10;
+/*层级关系
+公共头部：3
+内容：1
+公共底部：3
+搜索栏：2
+全屏页：4
+*/
+
+body {
+    background: #fbf9fe;
 }
 
 .app-header {
     /*position: absolute;*/
+    position: relative;
     transition: 0.3s;
-    left: 0;
-    top: 0;
     width: 100%;
     z-index: 3;
     height: 45px;
@@ -33,13 +29,10 @@
 }
 
 .app-content {
-    /*padding-top: 45px;*/
-    padding-bottom: 50px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     z-index: 1;
-    /* position: relative; */
-    /*height: 100%;*/
-    position: absolute;
+    /*position: absolute;*/
     left: 0;
     width: 100%;
 }
@@ -48,8 +41,8 @@
     bottom: 0;
     left: 0 !important;
     width: 100%;
-    position: absolute;
-    z-index: 4;
+    position: fixed;
+    z-index: 3;
 }
 
 .app-footer:not(:first-child)::before {
@@ -109,4 +102,19 @@
     right: 0;
     left: 0;
     z-index: 5;
+}
+
+.line-bottom:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    left: 8px;
+    top: 0;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    -webkit-transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    background-color: #b7b7b7;
+    height: 1px;
+    z-index: 10;
 }

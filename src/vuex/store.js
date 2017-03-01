@@ -8,6 +8,7 @@ const state = {
     // 所有接口地址
     currentPageName: "微信", //用于在wx-header组件中显示当前页标题
     headerStatus: true, //显示（true）/隐藏（false）wx-header组件
+    tipsStatus: false, //控制首页右上角菜单的显示(true)/隐藏(false)
     apiUrl: {
         getMsgList: "123"
     },
@@ -84,6 +85,49 @@ const state = {
                     "name": "赵浩荡"
                 }],
                 "user": [getUserInfo('wxid_zhaohd02')]
+            }, {
+                "mid": 5,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
+            }, {
+                "mid": 5,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
+            },
+            {
+                "mid": 5,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "newMsgCount": 4,
+                "msg": [{
+
+                    "text": 'nihao4',
+                    "date": 1488117964495,
+                    "name": "赵浩荡"
+                }],
+                "user": [getUserInfo('wxid_zhaohd02')]
             }
         ]
     }
@@ -102,6 +146,14 @@ const mutations = {
     },
     toggleHeaderStatus(state, status) {
         state.headerStatus = status
+    },
+    toggleTipsStatus(state, status) {
+        if (status == -1) {
+            state.tipsStatus = false
+        } else {
+            state.tipsStatus = !state.tipsStatus
+        }
+
     }
 
 }

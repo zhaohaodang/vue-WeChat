@@ -1,9 +1,9 @@
 <template>
   <div id="wx-header">
     <div class="other">
-      <span class="iconfont icon-tips-jia" v-show="$route.path==='/'" v-on:click="tipsOpen=!tipsOpen"></span>
+      <span class="iconfont icon-tips-jia" v-show="$route.path==='/'" v-on:click="$store.commit('toggleTipsStatus')"></span>
       <span class="iconfont icon-tips-add-friend" v-show="$route.path==='/contact'"></span>
-      <ul class="tips-menu" :class="[tipsOpen?'tips-open':'tips-close']">
+      <ul class="tips-menu" :class="[$store.state.tipsStatus?'tips-open':'tips-close']">
         <li> <span class="iconfont icon-tips-xiaoxi"></span>
           <div>发起群聊</div>
         </li>
@@ -29,7 +29,7 @@
     export default {
         data() {
             return {
-                tipsOpen: false
+
             }
         }
     }

@@ -73,7 +73,7 @@
                                 }
                             }
                         }
-                        e.preventDefault()
+                        // e.preventDefault()
                     }, false);
                     element.addEventListener('touchend', function(e) {
                         if (!isTouchMove) {
@@ -106,6 +106,9 @@
         },
         methods: {},
         mounted() {
+            this.$store.commit("setPageName", this.pageName)
+        },
+        activated() {
             this.$store.commit("setPageName", this.pageName)
         }
     }

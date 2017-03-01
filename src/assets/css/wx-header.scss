@@ -17,7 +17,11 @@
     }
     .other {
         position: absolute;
-        right: 15px;
+        right: 5px;
+        &>span {
+            display: inline-block;
+            width: 40px;
+        }
         .iconfont {
             font-size: 22px;
         }
@@ -35,7 +39,7 @@
             z-index: 2;
             width: 133px;
             font-size: 16px;
-            right: -10px;
+            right: 0;
             top: 54px;
             text-align: left;
             border-radius: 2px;
