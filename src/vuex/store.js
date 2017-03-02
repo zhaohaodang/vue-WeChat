@@ -7,6 +7,7 @@ let apiPublicDomain = '//vrapi.snail.com/'
 const state = {
     // 所有接口地址
     currentPageName: "微信", //用于在wx-header组件中显示当前页标题
+    backPageName: "返回",
     headerStatus: true, //显示（true）/隐藏（false）wx-header组件
     tipsStatus: false, //控制首页右上角菜单的显示(true)/隐藏(false)
     apiUrl: {
@@ -144,6 +145,9 @@ const mutations = {
     setPageName(state, name) {
         state.currentPageName = name
     },
+    setBackPageName(state, name) {
+        state.backPageName = name
+    },
     toggleHeaderStatus(state, status) {
         state.headerStatus = status
     },
@@ -153,7 +157,6 @@ const mutations = {
         } else {
             state.tipsStatus = !state.tipsStatus
         }
-
     }
 
 }

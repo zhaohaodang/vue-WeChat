@@ -9,11 +9,11 @@
  */
 
 .animated {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    animation: 0.5s linear;
+    /*animation: 0.25s linear;*/
 }
 
 .animated.infinite {
@@ -1573,7 +1573,7 @@
         opacity: 1;
     }
     to {
-        opacity: 1;
+        opacity: 0;
         -webkit-transform: translate3d(100%, 0, 0);
         transform: translate3d(100%, 0, 0);
     }
@@ -1584,7 +1584,7 @@
         opacity: 1;
     }
     to {
-        opacity: 1;
+        opacity: 0;
         -webkit-transform: translate3d(100%, 0, 0);
         transform: translate3d(100%, 0, 0);
     }

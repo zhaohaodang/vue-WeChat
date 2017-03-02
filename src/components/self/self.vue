@@ -79,11 +79,12 @@
     export default {
         data() {
             return {
-                pageName: "我"
+                "pageName": "我"
             }
         },
         mounted() {
             this.$store.commit("toggleTipsStatus", -1)
+            this.$store.commit("setPageName", this.pageName)
         },
         activated() {
             this.$store.commit("setPageName", this.pageName)
@@ -91,33 +92,6 @@
         }
     }
 </script>
-<style lang="scss">
-    #self {
-        position: absolute;
-        width: 100%;
-        .weui-cell__ft img {
-            height: 25px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .weui-cell__hd img {
-            width: 20px;
-            margin-right: 15px;
-            display: block;
-        }
-        img.self-header {
-            display: block;
-            margin-right: 10px;
-            border-radius: 4px;
-            width: 60px;
-            height: 60px;
-        }
-        .self-nickname {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-        .self-wxid {
-            font-size: 13px;
-        }
-    }
+<style>
+  @import "../../assets/css/self.css";
 </style>

@@ -3,19 +3,19 @@
   <div id="contact">
     <section>
       <div class="weui-cells_contact-head weui-cells weui-cells_access" style="margin-top:-1px">
-        <a class="weui-cell" >
+        <router-link to="/common/profile" class="weui-cell">
           <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-friend-notify.png"> </div>
           <div class="weui-cell_bd weui-cell_primary">
             <p>新的朋友</p>
           </div>
-        </a>
-        <a class="weui-cell" >
+        </router-link>
+        <a class="weui-cell">
           <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-addgroup.png"> </div>
           <div class="weui-cell_bd weui-cell_primary">
             <p>群聊</p>
           </div>
         </a>
-        <a class="weui-cell" >
+        <a class="weui-cell">
           <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-tag.png"> </div>
           <div class="weui-cell_bd weui-cell_primary">
             <p>标签</p>
@@ -147,25 +147,24 @@
   </div>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                "pageName": "通讯录"
-            }
-        },
-        mounted() {
-            this.$store.commit("setPageName", this.pageName)
-            this.$store.commit("toggleTipsStatus", -1)
-        },
-        activated() {
-            this.$store.commit("setPageName", this.pageName)
-            this.$store.commit("toggleTipsStatus", -1)
-        }
+  export default {
+    data() {
+      return {
+        "pageName": "通讯录"
+      }
+    },
+    mounted() {
+      this.$store.commit("setPageName", this.pageName)
+      this.$store.commit("toggleTipsStatus", -1)
+    },
+    activated() {
+      this.$store.commit("setPageName", this.pageName)
+      this.$store.commit("toggleTipsStatus", -1)
+      console.log('1')
     }
+  }
+
 </script>
 <style>
-    @import "../../assets/css/contact.css";
-    .weui-cell_bd {
-        font-size: 15px;
-    }
+  @import "../../assets/css/contact.css";
 </style>

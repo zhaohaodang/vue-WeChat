@@ -20,6 +20,9 @@
       <!--<div class="tips-masker" v-show="tips_isOpen"></div>-->
     </div>
     <div class="center">
+      <transition name="fade">
+        <div class="iconfont icon-return-arrow" style="left: 10px;position: absolute;" v-on:click="goBack" v-show="$route.path.split('/').length>2">{{$store.state.backPageName}}</div>
+      </transition>
       {{$store.state.currentPageName}}
       <!--<span class="parentheses" v-show='chatCount' v-text="index_nav[0].hint.count"></span>-->
     </div>
@@ -31,9 +34,26 @@
             return {
 
             }
+        },
+        methods: {
+            goBack() {
+                this.$router.go(-1)
+            }
         }
     }
 </script>
 <style>
     @import "../../assets/css/wx-header.css";
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s
+    }
+    
+    .fade-enter,
+    .fade-leave-to
+    /* .fade-leave-active in <2.1.8 */
+    
+    {
+        opacity: 0
+    }
 </style>
