@@ -1,17 +1,24 @@
 <template>
   <div id="app">
+      <!--头部-->
     <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
       <wx-header></wx-header>
     </header>
+    <!--搜索框-->
     <search :class="{'search-open':!$store.state.headerStatus}" v-show="$route.path=='/'||$route.path=='/contact'"></search>
+    <!--基本四页切换-->
     <section class="app-content">
         <keep-alive>
-            <router-view name="default"></router-view>
+             <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
+                <router-view name="default"></router-view>
+            </transition>
         </keep-alive>
     </section>
-    <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
+    <!--内页集合 附动效-->
+    <!--<transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
       <router-view name="subPage" class="full-screen"></router-view>
-    </transition>
+    </transition>-->
+    <!--底部-->
     <footer class="app-footer">
       <wx-nav></wx-nav>
     </footer>
@@ -47,9 +54,9 @@
                 this.enterAnimate = toDepth > fromDepth ? "animated fadeInRight" : "animated fadeInLeft"
                 this.leaveAnimate = toDepth > fromDepth ? "animated fadeOutLeft" : "animated fadeOutRight"
                 if (toDepth === 3) {
-                    this.leaveAnimate = "animated fadeOutRight"
+                    this.leaveAnimate = "animated fadeOutLeft"
                 }
-                console.log(this.leaveAnimate)
+                console.log(this.enterAnimate)
                 console.log(toDepth > fromDepth ? "进入下一层" : "返回上一层")
             }
         },
@@ -64,7 +71,7 @@
 <style>
     @import "assets/css/base.css";
     @import "assets/css/common.css";
-    @import "assets/css/iconfont.css";
-    @import "assets/css/animate.css";
-    @import "assets/css/weui.min.css";
+    @import "assets/css/lib/iconfont.css";
+    @import "assets/css/lib/animate.css";
+    @import "assets/css/lib/weui.min.css";
 </style>

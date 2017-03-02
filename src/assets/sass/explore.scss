@@ -1,4 +1,6 @@
 #explore {
+    position: absolute;
+    width: 100%;
     .weui-cell__hd {
         img {
             width: 20px;
@@ -9,18 +11,18 @@
     .home__notice {
         position: relative;
         img {
-            width: 26px;
-            height: 26px;
+            width: 28px;
+            height: 28px;
             vertical-align: middle;
         }
     }
     .new-msg-dot {
         position: absolute;
         top: -4px;
-        right: -4px;
+        right: -5px;
         display: inline-block;
-        width: 8px;
-        height: 8px;
+        width: 9px;
+        height: 9px;
         border-radius: 50%;
         background-color: red;
     }

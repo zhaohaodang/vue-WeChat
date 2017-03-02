@@ -2,7 +2,7 @@
   <div id="explore">
     <section>
       <div class="weui-cells">
-        <div class="weui-cell weui-cell_access">
+        <router-link to="/common/profile" class="weui-cell weui-cell_access" tag="div">
           <div class="weui-cell__hd">
             <img src="../../assets/images/find_icon-circle.png" >
           </div>
@@ -15,7 +15,7 @@
               <i class="new-msg-dot"></i>
             </div>
           </div>
-        </div>
+        </router-link>
       </div>
       <div class="weui-cells">
         <div class="weui-cell weui-cell_access" id="scanCell">

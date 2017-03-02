@@ -29,6 +29,10 @@ const routes = [{
         components: {
             "subPage": resolve => require(["../components/settings/common/language.vue"], resolve)
         }
+    },
+    {
+        path: '/common/profile',
+        component: resolve => require(["../components/common/profile.vue"], resolve)
     }
 ]
 export default new Router({

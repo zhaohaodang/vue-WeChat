@@ -1,6 +1,34 @@
-<template>
+
+<template>
   <div id="contact">
     <section>
+      <div class="weui-cells_contact-head weui-cells weui-cells_access" style="margin-top:-1px">
+        <a class="weui-cell" >
+          <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-friend-notify.png"> </div>
+          <div class="weui-cell_bd weui-cell_primary">
+            <p>新的朋友</p>
+          </div>
+        </a>
+        <a class="weui-cell" >
+          <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-addgroup.png"> </div>
+          <div class="weui-cell_bd weui-cell_primary">
+            <p>群聊</p>
+          </div>
+        </a>
+        <a class="weui-cell" >
+          <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-tag.png"> </div>
+          <div class="weui-cell_bd weui-cell_primary">
+            <p>标签</p>
+          </div>
+        </a>
+        <a class="weui-cell">
+          <div class="weui-cell_hd"><img class="img-obj-cover" src="../../assets/images/contact_top-offical.png"></div>
+          <div class="weui-cell_bd weui-cell_primary">
+            <p>公众号</p>
+          </div>
+        </a>
+      </div>
+
       <div class="weui-cells__title">A</div>
       <div class="weui-cells">
         <div class="weui-cell weui-cell_access">
@@ -137,4 +165,7 @@
 </script>
 <style>
     @import "../../assets/css/contact.css";
+    .weui-cell_bd {
+        font-size: 15px;
+    }
 </style>

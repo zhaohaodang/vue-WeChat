@@ -6,6 +6,13 @@
 全屏页：4
 */
 
+#app {
+    /*position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;*/
+}
+
 body {
     background: #fbf9fe;
 }
@@ -34,6 +41,7 @@ body {
     z-index: 1;
     /*position: absolute;*/
     left: 0;
+    padding-bottom: 49px;
     width: 100%;
 }
 
@@ -97,8 +105,9 @@ body {
 .full-screen {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: -50px;
     background: #eee;
+    overflow: hidden;
     right: 0;
     left: 0;
     z-index: 5;
