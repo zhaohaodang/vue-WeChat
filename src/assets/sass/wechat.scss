@@ -6,6 +6,20 @@
         .list-row {
             height: 64px;
             position: relative;
+            overflow: hidden;
+            &.item-hide {
+                transition: 0.3s;
+                height: 0px;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    top: 1px;
+                    bottom: 1px;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.3)
+                }
+            }
             &:last-child:after {
                 content: "";
                 position: absolute;

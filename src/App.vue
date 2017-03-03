@@ -58,14 +58,9 @@
                     this.leaveAnimate = "animated fadeOutRight"
                 }
                  if (fromDepth === 2) {
-                     console.log(from.name)
+                     console.info("上一页名称: "+from.name)
                     this.$store.commit("setBackPageName", from.name)
                 }
-                //很奇怪 从profile页调到self页 self中的activated未触发
-                if (toDepth < fromDepth && to.path === '/self') {
-                    this.$store.commit("setPageName", "我")
-                }
-                console.log(from.path)
                 console.log(toDepth > fromDepth ? "进入下一层" : "返回上一层")
             }
         },

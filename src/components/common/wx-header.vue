@@ -38,6 +38,8 @@
         methods: {
             goBack() {
                 this.$router.go(-1)
+                //保证返回操作后正确显示页面名称
+                this.$store.commit("setPageName",this.$store.state.backPageName)
             }
         }
     }

@@ -18,6 +18,10 @@ const routes = [{
         path: '/self',
         name: "我",
         component: resolve => require(["../components/self/self.vue"], resolve)
+    },
+    {
+        path: '/self/profile',
+        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/common/profile.vue"], resolve) }
     }, {
         path: '/self/settings',
         components: { "subPage": resolve => require(["../components/settings/settings.vue"], resolve) }
@@ -33,11 +37,8 @@ const routes = [{
         components: {
             "subPage": resolve => require(["../components/settings/common/language.vue"], resolve)
         }
-    },
-    {
-        path: '/common/profile',
-        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/common/profile.vue"], resolve) }
     }
+
 ]
 export default new Router({
     base: "/",

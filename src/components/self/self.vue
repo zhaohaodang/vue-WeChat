@@ -3,7 +3,7 @@
   <div id="self">
     <div class="weui-tab__content" style="display: block;">
       <div class="weui-cells">
-        <router-link to="/common/profile" class="weui-cell weui-cell_access">
+        <router-link to="/self/profile" class="weui-cell weui-cell_access">
           <div class="weui-cell__hd">
             <img src="https://team.weui.io/avatar/bear.jpg" alt="" class="self-header">
           </div>
@@ -72,25 +72,25 @@
         </router-link>
       </div>
     </div>
-
   </div>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                "pageName": "我"
-            }
-        },
-        mounted() {
-            this.$store.commit("toggleTipsStatus", -1)
-            this.$store.commit("setPageName", this.pageName)
-        },
-        activated() {
-            this.$store.commit("setPageName", this.pageName)
-            this.$store.commit("toggleTipsStatus", -1)
-        }
+  export default {
+    data() {
+      return {
+        "pageName": "我"
+      }
+    },
+    mounted() {
+      this.$store.commit("setPageName", this.pageName)
+      this.$store.commit("toggleTipsStatus", -1)
+    },
+    activated() {
+      this.$store.commit("setPageName", this.pageName)
+      this.$store.commit("toggleTipsStatus", -1)
     }
+  }
+
 </script>
 <style>
   @import "../../assets/css/self.css";
