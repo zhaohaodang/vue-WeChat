@@ -48,17 +48,16 @@
 </template>
 <script>
     export default {
+        mixins:[window.mixin],
         data() {
             return {
                 "pageName": "通讯录"
             }
         },
         mounted() {
-            this.$store.commit("setPageName", this.pageName)
             this.$store.commit("toggleTipsStatus", -1)
         },
         activated() {
-            this.$store.commit("setPageName", this.pageName)
             this.$store.commit("toggleTipsStatus", -1)
         },
         computed: {

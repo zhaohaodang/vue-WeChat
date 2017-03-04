@@ -7,6 +7,14 @@ const routes = [{
         name: "微信",
         component: resolve => require(["../components/wechat/wechat.vue"], resolve)
     }, {
+        path: '/wechat/dialogue',
+        name: "",
+        parent: "微信",
+        components: {
+            "default": resolve => require(["../components/wechat/wechat.vue"], resolve),
+            "subPage": resolve => require(["../components/wechat/dialogue.vue"], resolve)
+        }
+    }, {
         path: '/contact',
         name: "通讯录",
         component: resolve => require(["../components/contact/contact.vue"], resolve)

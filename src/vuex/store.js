@@ -26,8 +26,7 @@ const state = {
                 "quiet": false,
                 "msg": [{
                     "text": 'nihao1',
-                    "date": 1488117964495,
-                    "name": "赵浩荡"
+                    "date": 1488117964495
                 }],
                 "user": [user.getUserInfo('wxid_zhaohd')]
             },
@@ -42,14 +41,14 @@ const state = {
                 "msg": [{
                     "text": 'nihao2',
                     "date": 1488117964495,
-                    "name": "赵浩荡"
+                    "name": "阿荡"
                 }],
                 "user": [user.getUserInfo('wxid_zhaohd'), user.getUserInfo('wxid_yehua')]
             },
             {
                 "mid": 3,
                 "type": "group",
-                "group_name": "收购万达讨论群",
+                "group_name": "收购淘宝讨论群",
                 "group_qrCode": "",
                 "read": true,
                 "newMsgCount": 1,
@@ -57,9 +56,9 @@ const state = {
                 "msg": [{
                     "text": 'nihao3',
                     "date": 1488117964495,
-                    "name": "赵浩荡"
+                    "name": "阿荡"
                 }],
-                "user": [user.getUserInfo('wxid_zhenji'), user.getUserInfo('wxid_zhugeliang')]
+                "user": [user.getUserInfo('wxid_zhenji'), user.getUserInfo('wxid_zhugeliang'), user.getUserInfo('wxid_zhaohd')]
             },
             {
                 "mid": 4,
@@ -72,8 +71,7 @@ const state = {
                 "msg": [{
 
                     "text": 'nihao4',
-                    "date": 1488117964495,
-                    "name": "赵浩荡"
+                    "date": 1488117964495
                 }],
                 "user": [user.getUserInfo('wxid_sunquan')]
             },
@@ -88,8 +86,7 @@ const state = {
                 "msg": [{
 
                     "text": 'nihao4',
-                    "date": 1488117964495,
-                    "name": "赵浩荡"
+                    "date": 1488117964495
                 }],
                 "user": [user.getUserInfo('wxid_sunshangxiang')]
             },
@@ -104,8 +101,7 @@ const state = {
                 "msg": [{
 
                     "text": 'nihao4',
-                    "date": 1488117964495,
-                    "name": "赵浩荡"
+                    "date": 1488117964495
                 }],
                 "user": [user.getUserInfo('wxid_guangyu')]
             }

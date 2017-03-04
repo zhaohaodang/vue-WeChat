@@ -160,7 +160,21 @@ body {
     z-index: 10;
 }
 
+a {
+    cursor: pointer;
+}
+
 a:visited,
 a:hover {
     color: #000;
+}
+
+.parentheses {}
+
+.parentheses:before {
+    content: "(";
+}
+
+.parentheses:after {
+    content: ")";
 }

@@ -18,7 +18,7 @@ const users = [{ //昵称备注都有的朋友
         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
         "nickname": "阿荡",
         "sex": 1,
-        "remark": "赵浩荡",
+        "remark": "阿荡",
         "signature": "填坑小能手",
         "telphone": 18896586152,
         "album": [{
@@ -136,7 +136,7 @@ const users = [{ //昵称备注都有的朋友
         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg",
         "nickname": "孙尚香",
         "sex": 0,
-        "remark": "孙尚香",
+        "remark": "孙尚香2",
         "signature": "夫君,身体要紧~",
         "telphone": 18896586152,
         "album": [{

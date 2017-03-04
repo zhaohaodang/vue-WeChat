@@ -1,13 +1,13 @@
 <template>
     <div id="app">
+    <div class="zh" ref="demo2"></div>
         <!--头部-->
         <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
-            <wx-header></wx-header>
+            <wx-header :pageName="pageName"></wx-header>
         </header>
         <div class="outter" :class="{'hideLeft':$route.path.split('/').length>2}">
-
             <!--搜索框-->
-            <search :class="{'search-open':!$store.state.headerStatus}" v-show="$route.path=='/'||$route.path=='/contact'"></search>
+            <search :class="{'search-open':!$store.state.headerStatus}" v-show="$route.path.indexOf('explore')===-1&&$route.path.indexOf('self')===-1"></search>
             <!--基本四页切换-->
             <section class="app-content">
                 <keep-alive>
@@ -15,7 +15,7 @@
                 </keep-alive>
             </section>
             <!--底部 -->
-            <footer class="app-footer">
+            <footer class="app-footer" ref="demo">
                 <wx-nav></wx-nav>
             </footer>
         </div>
@@ -30,6 +30,8 @@
     import WxHeader from './components/common/wx-header'
     import WxNav from './components/common/wx-nav'
     import search from './components/common/search'
+    import mixin from "./vuex/mixin.js"
+    window.mixin = mixin
     export default {
         name: 'app',
         components: {
@@ -39,16 +41,17 @@
         },
         data() {
             return {
-                "pageName": "微信",
+                "pageName": "",
                 "routerAnimate": false,
                 "enterAnimate": "animated", //animated fadeInRight
                 "leaveAnimate": "animated" //animated fadeOutRight
             }
         },
         watch: {
-            "$route"(to, from) {
+            "$route" (to, from) {
                 const toDepth = to.path.split('/').length
                 const fromDepth = from.path.split('/').length
+                this.pageName = to.name
                 if (toDepth === fromDepth) {
                     return;
                 }
@@ -57,21 +60,17 @@
                 if (toDepth === 3) {
                     this.leaveAnimate = "animated fadeOutRight"
                 }
-                 if (fromDepth === 2) {
-                     console.info("上一页名称: "+from.name)
+
+                if (fromDepth === 2) {
+                    // console.info("上一页名称: " + from.name)
                     this.$store.commit("setBackPageName", from.name)
                 }
-                console.log(toDepth > fromDepth ? "进入下一层" : "返回上一层")
             }
-        },
-        activated() {
-            this.$store.commit("setPageName", this.pageName)
         },
         mounted() {
             this.$store.commit("setPageName", this.pageName)
         }
     }
-
 </script>
 <style>
     @import "assets/css/base.css";

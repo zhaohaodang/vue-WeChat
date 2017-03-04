@@ -13,17 +13,11 @@
             search,
             msgItem
         },
+        mixins:[window.mixin],
         data() {
             return {
                 "pageName": "微信"
             }
-        },
-        methods: {},
-        mounted() {
-            this.$store.commit("setPageName", this.pageName)
-        },
-        activated() {
-            this.$store.commit("setPageName", this.pageName)
         }
     }
 </script>

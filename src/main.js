@@ -8,8 +8,7 @@ import store from './vuex/store'
 import FastClick from 'fastclick'
 import filters from './filters'
 Vue.use(VueAxios, axios, vuex)
-
-// 注册全局过滤器
+    // 注册全局过滤器
 filters(Vue)
     /*解决移动端300ms点击延迟*/
 FastClick.attach(document.body);

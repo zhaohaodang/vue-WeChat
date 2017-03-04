@@ -1,6 +1,6 @@
 <template>
-    <li :class="{'item-hide':deleteMsg}">
-        <div class="list-info" v-swiper>
+    <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="li" :class="{'item-hide':deleteMsg}">
+    <div class="list-info" v-swiper>
             <div class="header-box">
                 <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.newMsgCount}}</i>
                 <i class="new-msg-dot" v-show="!read&&item.quiet"></i>
@@ -25,7 +25,7 @@
             <div class="operate-read" v-else v-on:click="toggleMsgRead">标为已读</div>
             <div class="operate-del" v-on:click="deleteMsg=true">删除</div>
         </div>
-    </li>
+    </router-link>
 </template>
 <script>
     export default {

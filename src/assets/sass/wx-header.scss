@@ -15,9 +15,14 @@
     .center {
         margin: 0 auto;
         text-align: center;
+        font-size: 17px;
+        span {
+            font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif
+        }
     }
     .other {
         position: absolute;
+        cursor: pointer;
         right: 5px;
         &>span {
             display: inline-block;
