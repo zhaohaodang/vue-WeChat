@@ -1,25 +1,24 @@
 <template>
     <div id="app">
-    <div class="zh" ref="demo2"></div>
-        <!--头部-->
+        <!--通用头部-->
         <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
             <wx-header :pageName="pageName"></wx-header>
         </header>
         <div class="outter" :class="{'hideLeft':$route.path.split('/').length>2}">
-            <!--搜索框-->
+            <!--搜索框 只在“微信”和“通讯录”页面下显示-->
             <search :class="{'search-open':!$store.state.headerStatus}" v-show="$route.path.indexOf('explore')===-1&&$route.path.indexOf('self')===-1"></search>
-            <!--基本四页切换-->
+            <!--四个门面页 “微信” “通讯录” “发现” “我”-->
             <section class="app-content">
                 <keep-alive>
                     <router-view name="default"></router-view>
                 </keep-alive>
             </section>
-            <!--底部 -->
-            <footer class="app-footer" ref="demo">
+            <!--底部导航 路由 -->
+            <footer class="app-footer">
                 <wx-nav></wx-nav>
             </footer>
         </div>
-        <!--内页集合 附动效-->
+        <!--其他店内页集合 有过渡效果-->
         <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
             <router-view name="subPage" class="full-screen"></router-view>
         </transition>
@@ -43,36 +42,38 @@
             return {
                 "pageName": "",
                 "routerAnimate": false,
-                "enterAnimate": "animated", //animated fadeInRight
-                "leaveAnimate": "animated" //animated fadeOutRight
+                "enterAnimate": "", //页面进入动效
+                "leaveAnimate": "" //页面离开动效
             }
         },
         watch: {
+            // 监听 $route 为店内页设置不同的过渡效果
             "$route" (to, from) {
                 const toDepth = to.path.split('/').length
                 const fromDepth = from.path.split('/').length
+                    //当在店内页刷新时 此店内页前一页的名字数据丢失 此时利用 $route,name 救场
                 this.pageName = to.name
+                    //同一级页面无需设置过渡效果
                 if (toDepth === fromDepth) {
                     return;
                 }
                 this.enterAnimate = toDepth > fromDepth ? "animated fadeInRight" : "animated fadeInLeft"
                 this.leaveAnimate = toDepth > fromDepth ? "animated fadeOutLeft" : "animated fadeOutRight"
+                    // 从店面页进入店内页 需要对店内页重新设置离开动效
                 if (toDepth === 3) {
                     this.leaveAnimate = "animated fadeOutRight"
                 }
-
-                if (fromDepth === 2) {
-                    // console.info("上一页名称: " + from.name)
+                // 进入下一页需要记录上一页的名字 
+                if (toDepth > fromDepth) {
                     this.$store.commit("setBackPageName", from.name)
                 }
             }
-        },
-        mounted() {
-            this.$store.commit("setPageName", this.pageName)
         }
     }
 </script>
 <style>
+    /*将公用的样式统一在此导入*/
+    
     @import "assets/css/base.css";
     @import "assets/css/common.css";
     @import "assets/css/lib/iconfont.css";

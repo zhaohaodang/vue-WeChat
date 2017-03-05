@@ -1,8 +1,9 @@
 const filters = {
     /**
-     * 将日期/时间按照一定格式显示 
-    date 时间戳
-    fmtExp 显示格式
+     * 功能：将时间戳按照给定的 时间/日期 格式进行处理
+     * @param {Number} date 时间戳 
+     * @param {String} fmtExp 时间格式 'hh:ss'
+     * @returns {String} 规范后的 时间/日期 字符串
      */
     fmtDate: function(date, fmtExp) {
         var date = new Date(date)

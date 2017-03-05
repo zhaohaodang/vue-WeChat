@@ -139,7 +139,6 @@ const mutations = {
     cancelMsgStick(state, mid) {
 
     }
-
 }
 
 const actions = {

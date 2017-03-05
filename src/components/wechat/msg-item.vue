@@ -1,6 +1,8 @@
 <template>
+    <!--进入 dialogue 页面，携带参数 mid name group_num -->
     <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="li" :class="{'item-hide':deleteMsg}">
-    <div class="list-info" v-swiper>
+        <!--自定义指令 v-swiper 用于对每个消息进行滑动处理-->
+        <div class="list-info" v-swiper>
             <div class="header-box">
                 <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.newMsgCount}}</i>
                 <i class="new-msg-dot" v-show="!read&&item.quiet"></i>
@@ -38,11 +40,13 @@
 
         },
         methods: {
+            //切换消息未读/已读状态
             toggleMsgRead(event) {
                 this.read = !this.read
                 event.target.parentNode.parentNode.firstChild.style.marginLeft = 0 + "px"
             }
         },
+        // 参考 https://vuefe.cn/v2/guide/custom-directive.html
         directives: {
             swiper: {
                 bind: function(element, binding) {
@@ -93,8 +97,6 @@
                                 return;
                             }
                             if (Math.abs(distanceX) < 60) {
-                                // fn();
-                                // binding.value()
                                 isSwipe = true
                                 element.style.transition = "0.3s"
                                 element.style.marginLeft = 0 + "px"
