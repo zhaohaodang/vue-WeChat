@@ -23,7 +23,7 @@
 .outter {
     transition: 0.5s;
     position: absolute;
-    top: 45px;
+    top: 0;
     width: 100%;
     bottom: 0;
 }
@@ -134,9 +134,9 @@ body {
     font-size: 0;
 }
 
-.full-screen {
+.sub-page {
     position: absolute;
-    top: 45px;
+    top: 0px;
     bottom: 0px;
     background: #eee;
     /*overflow: hidden;*/
@@ -183,8 +183,8 @@ a:hover {
     top: 0;
 }
 
-.search-open-contact #search {
-    margin-top: 0 !important;
+.search-open-contact #wx-header {
+    top: -45px !important;
 }
 
 .weui-cell__hd {

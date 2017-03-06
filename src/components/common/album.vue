@@ -1,0 +1,79 @@
+<template>
+    <div class="album">
+        <header id="wx-header">
+            <!--<div class="other"><span>添加朋友</span></div>-->
+            <div class="center">
+                <router-link to="/self" tag="div" class="iconfont icon-return-arrow">
+                    <span>我</span>
+                </router-link>
+                <span>相册</span>
+            </div>
+        </header>
+        <div class="home-pic">
+            <div class="home-pic-base">
+                <div class="top-pic">
+                    <div class="top-pic-inner">
+                        <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png">
+                    </div>
+                </div>
+                <div class="top-name _ellipsis">阿荡</div>
+            </div>
+            <p class="sign">填坑小能手</p>
+        </div>
+        <section class="album-box clearfix">
+            <div class="post-date">
+                <b class="day">04</b>
+                <b class="month">3月</b>
+            </div>
+            <div class="post-content">
+                <div class="tumb-box">
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                </div>
+                <div class="thumb-desc">
+                    附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅
+                    <p class="number">共9张</p>
+                </div>
+            </div>
+        </section>
+        <section class="album-box clearfix">
+            <div class="post-date">
+                <b class="day">12</b>
+                <b class="month">2月</b>
+            </div>
+            <div class="post-content">
+                <div class="tumb-box">
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                     <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                </div>
+                <div class="thumb-desc">
+                    附加积分覅就覅
+                    <p class="number">共9张</p>
+                </div>
+            </div>
+        </section>
+        <section class="album-box clearfix">
+            <div class="post-date">
+                <b class="day">23</b>
+                <b class="month">1月</b>
+            </div>
+            <div class="post-content">
+                <div class="tumb-box">
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                </div>
+                <div class="thumb-desc">
+                    附加积分覅就覅
+                    <p class="number">共9张</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>
+<script>
+    export default {}
+
+</script>
+<style>
+    @import "../../assets/css/album.css";
+</style>

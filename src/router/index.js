@@ -37,9 +37,37 @@ const routes = [{
         name: "发现",
         component: resolve => require(["../components/explore/explore.vue"], resolve)
     }, {
+        path: '/explore/moments',
+        name: "朋友圈",
+        components: {
+            "default": resolve => require(["../components/explore/explore.vue"], resolve),
+            "subPage": resolve => require(["../components/explore/moments.vue"], resolve)
+        }
+    }, {
         path: '/self',
         name: "我",
         component: resolve => require(["../components/self/self.vue"], resolve)
+    }, {
+        path: '/self/album',
+        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/common/album.vue"], resolve) }
+    },
+    {
+        path: '/self/settings',
+        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/self/settings.vue"], resolve) }
+    }, {
+        path: '/self/settings/security',
+        components: { "subPage": resolve => require(["../components/self/settings/security.vue"], resolve) }
+    },
+    {
+        path: '/self/settings/notice',
+        components: { "subPage": resolve => require(["../components/self/settings/notice.vue"], resolve) }
+    },
+    {
+        path: '/self/settings/privacy',
+        components: { "subPage": resolve => require(["../components/self/settings/privacy.vue"], resolve) }
+    }, {
+        path: '/self/settings/common',
+        components: { "subPage": resolve => require(["../components/self/settings/common.vue"], resolve) }
     },
     {
         path: '/self/profile',

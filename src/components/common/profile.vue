@@ -1,12 +1,14 @@
 <template>
     <div class="profile">
-        <!--<header class="app-header">
+        <header id="wx-header">
+            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
-                <div class="iconfont icon-return-arrow" style="left: 10px;position: absolute;" v-on:click="goBack">返回</div>
-                {{$store.state.currentPageName}}
-                <span class="parentheses" v-show='chatCount' v-text="index_nav[0].hint.count"></span>
+                <router-link to="/self" tag="div" class="iconfont icon-return-arrow">
+                    <span>我</span>
+                </router-link>
+                <span>个人信息</span>
             </div>
-        </header>-->
+        </header>
         <div class="weui-cells">
             <div class="weui-cell" id="avatarCell">
                 <div class="weui-cell__bd">
@@ -101,12 +103,9 @@
             goBack() {
                 this.$router.back()
             }
-        },
-        mounted() {
-            this.$store.commit("setPageName", this.pageName)
         }
     }
 </script>
 <style>
-    .profile {}
+    @import "../../assets/css/wx-header.css";
 </style>

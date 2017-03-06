@@ -2,7 +2,7 @@
   <div id="explore">
     <section>
       <div class="weui-cells">
-        <router-link to="/common/profile" class="weui-cell weui-cell_access" tag="div">
+        <router-link to="/explore/moments" class="weui-cell weui-cell_access" tag="div">
           <div class="weui-cell__hd">
             <img src="../../assets/images/find_icon-circle.png" >
           </div>

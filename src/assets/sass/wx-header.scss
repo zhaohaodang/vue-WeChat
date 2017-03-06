@@ -19,18 +19,24 @@
         span {
             font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif
         }
+        .icon-return-arrow {
+            left: 10px;
+            position: absolute;
+            font-size: 16px;
+        }
     }
     .other {
         position: absolute;
         cursor: pointer;
-        right: 5px;
+        right: 10px;
         &>span {
             font-size: 16px;
             display: inline-block;
         }
-        .iconfont {
+        &>.iconfont {
             font-size: 22px;
             width: 40px;
+            text-align: center;
         }
         .tips-masker {
             position: fixed;

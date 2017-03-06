@@ -26,10 +26,10 @@
       <!--<div class="tips-masker" v-show="tips_isOpen"></div>-->
     </div>
     <div class="center">
-      <transition name="fade">
-        <div class="iconfont icon-return-arrow" style="left: 10px;position: absolute;font-size: 16px;" v-on:click="goBack" v-show="$route.path.split('/').length>2"><span>{{$store.state.backPageName}}</span></div>
-      </transition>
-      <span>{{pageName||$store.state.currentPageName}}</span>
+      <!-- <transition name="fade">
+  <div class="iconfont icon-return-arrow" style="left: 10px;position: absolute;font-size: 16px;" v-on:click="goBack" v-show="$route.path.split('/').length>2"><span>{{$store.state.backPageName}}</span></div> 
+      </transition>-->
+      <span>{{$store.state.currentPageName||pageName}}</span>
       <!--微信群 显示群名以及成员人数-->
       <span class="parentheses" v-show='$route.query.group_num&&$route.query.group_num!=1'>{{$route.query.group_num}}</span>
     </div>
@@ -54,7 +54,8 @@
 
 </script>
 <style>
-  @import "../../assets/css/wx-header.css";
+  /* @import "../../assets/css/wx-header.css";*/
+  
   .fade-enter-active,
   .fade-leave-active {
     transition: opacity .5s

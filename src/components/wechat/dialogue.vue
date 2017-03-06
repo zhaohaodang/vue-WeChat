@@ -1,5 +1,18 @@
 <template>
     <div>
+        <header id="wx-header">
+            <div class="other">
+                <span class="iconfont icon-chat-group" v-show="$route.query.group_num&&$route.query.group_num!=1"></span>
+                <span class="iconfont icon-chat-friends" v-show="$route.query.group_num===1"></span>
+            </div>
+            <div class="center">
+                <router-link to="/" tag="div" class="iconfont icon-return-arrow">
+                    <span>微信</span>
+                </router-link>
+                <span>{{pageName}}</span>
+                <span class="parentheses" v-show='$route.query.group_num&&$route.query.group_num!=1'>{{$route.query.group_num}}</span>
+            </div>
+        </header>
         <section class="dialogue-section">
             <div class="dialogue-section-inner">
                 <div class="dialogue-item dialogue-item--others">
