@@ -3,7 +3,7 @@
         <header id="wx-header">
             <div class="other">
                 <span class="iconfont icon-chat-group" v-show="$route.query.group_num&&$route.query.group_num!=1"></span>
-                <span class="iconfont icon-chat-friends" v-show="$route.query.group_num===1"></span>
+                <span class="iconfont icon-chat-friends" v-show="$route.query.group_num==1"></span>
             </div>
             <div class="center">
                 <router-link to="/" tag="div" class="iconfont icon-return-arrow">
@@ -13,15 +13,17 @@
                 <span class="parentheses" v-show='$route.query.group_num&&$route.query.group_num!=1'>{{$route.query.group_num}}</span>
             </div>
         </header>
-        <section class="dialogue-section">
-            <div class="dialogue-section-inner">
-                <div class="dialogue-item dialogue-item--others">
-                </div>
-                <div class="dialogue-item dialogue-item--time">
-                </div>
-                <div class="dialogue-item dialogue-item--self">
-                </div>
+        <section class="dialogue-section clearfix" v-on:click="MenuOutsideClick">
+            <div class="row clearfix" v-for="item in msgInfo.msg">
+                <img :src="item.headerUrl" class="header">
+                <p class="text" v-more>{{item.text}}</p>
             </div>
+            <span class="msg-more" id="msg-more"><ul>
+                    <li>复制</li>
+                    <li>转发</li>
+                    <li>收藏</li>
+                    <li>删除</li>
+                </ul></span>
         </section>
         <footer class="dialogue-footer">
             <div class="component-dialogue-bar-person">
@@ -95,7 +97,7 @@
                     //     recordingVoice = document.querySelector('.recording-voice'),
                     //     recordingCancel = document.querySelector('.recording-cancel'),
                     var startTx, startTy
-                    element.addEventListener('touchstart', function (e) {
+                    element.addEventListener('touchstart', function(e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice')
                         element.className = "chat-say say-active"
@@ -106,7 +108,7 @@
                         startTy = touches.clientY
                         e.preventDefault()
                     }, false)
-                    element.addEventListener('touchend', function (e) {
+                    element.addEventListener('touchend', function(e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice'),
                             recordingCancel = document.querySelector('.recording-cancel')
@@ -115,7 +117,7 @@
                         console.log('end')
                         e.preventDefault()
                     }, false)
-                    element.addEventListener('touchmove', function (e) {
+                    element.addEventListener('touchmove', function(e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice'),
                             recordingCancel = document.querySelector('.recording-cancel')
@@ -135,17 +137,44 @@
                         e.preventDefault()
                     }, false);
                 }
+            },
+            more: {
+                bind(element, binding) {
+                    var startTx, startTy
+                    element.addEventListener('touchstart', function(e) {
+                        var msgMore = document.getElementById('msg-more'),
+                            touches = e.changedTouches[0],
+                            startTx = touches.clientX,
+                            startTy = touches.clientY
+                        msgMore.style.left = ((startTx - 18) > 180 ? 180 : (startTx - 18)) + 'px'
+                        msgMore.style.top = (element.offsetTop - 33) + 'px'
+                        msgMore.style.display = "block"
+                        e.preventDefault()
+                    }, false)
+                    element.addEventListener('touchend', function(e) {
+                        e.preventDefault()
+                    }, false)
+                }
             }
-        }, methods: {
-            "focusIpt"() {
-                console.log('1')
-                var interval = setInterval(function () {
+        },
+        methods: {
+            // 解决输入法被激活时 底部输入框被遮住问题
+            focusIpt() {
+                var interval = setInterval(function() {
                     document.body.scrollTop = document.body.scrollHeight
                 }, 100)
+            },
+            MenuOutsideClick(e) {
+                var container = document.querySelectorAll('.text'),
+                    msgMore = document.getElementById('msg-more')
+                if (e.target.className === 'text') {
+
+                } else {
+                    msgMore.style.display = 'none'
+                }
             }
         }
     }
-
 </script>
 <style>
     @import "../../assets/css/dialogue.css";

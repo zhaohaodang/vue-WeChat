@@ -2,16 +2,16 @@
   <div id="explore">
     <section>
       <div class="weui-cells">
-        <router-link to="/explore/moments" class="weui-cell weui-cell_access" tag="div">
+        <router-link to="/explore/moments" class="weui-cell weui-cell_access" tag="div" v-on:click.native="momentNewMsg=false">
           <div class="weui-cell__hd">
             <img src="../../assets/images/find_icon-circle.png" >
           </div>
-          <div class="weui-cell__bd">
+          <div class="weui-cell__bd" style="line-height: 28px;">
             朋友圈
           </div>
           <div class="weui-cell__ft">
-            <div class="home__notice">
-              <img src="https://team.weui.io/avatar/jf.jpg" alt="" class="">
+            <div class="home__notice" v-show="momentNewMsg">
+              <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" alt="" class="">
               <i class="new-msg-dot"></i>
             </div>
           </div>
@@ -77,10 +77,11 @@
 </template>
 <script>
     export default {
-      mixins:[window.mixin],
+        mixins: [window.mixin],
         data() {
             return {
-                pageName: "发现"
+                pageName: "发现",
+                momentNewMsg: true
             }
         },
         activated() {

@@ -1,10 +1,10 @@
 <template>
     <!--进入 dialogue 页面，携带参数 mid name group_num -->
-    <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="li" :class="{'item-hide':deleteMsg}">
+    <li :class="{'item-hide':deleteMsg}">
         <!--自定义指令 v-swiper 用于对每个消息进行滑动处理-->
-        <div class="list-info" v-swiper>
+        <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="div" class="list-info" v-swiper v-on:click.native="toggleMsgRead($event,true)">
             <div class="header-box">
-                <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.newMsgCount}}</i>
+                <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.msg.length}}</i>
                 <i class="new-msg-dot" v-show="!read&&item.quiet"></i>
                 <div class="header" :class="[item.type=='group'?'multi-header':'']">
                     <img v-for="userInfo in item.user" :src="userInfo.headerUrl">
@@ -17,17 +17,17 @@
                 <div class="desc-msg">
                     <div class="desc-mute iconfont icon-mute" v-show="item.quiet">
                     </div>
-                    <!--<span></span>-->
+                    <span v-show="item.type=='group'">{{item.msg[item.msg.length-1].name}}:</span>
                     <span>{{item.msg[item.msg.length-1].text}}</span>
                 </div>
             </div>
-        </div>
+        </router-link>
         <div class="operate-box">
             <div class="operate-unread" v-if="read" v-on:click="toggleMsgRead">标为未读</div>
             <div class="operate-read" v-else v-on:click="toggleMsgRead">标为已读</div>
             <div class="operate-del" v-on:click="deleteMsg=true">删除</div>
         </div>
-    </router-link>
+    </li>
 </template>
 <script>
     export default {
@@ -37,12 +37,23 @@
                 read: this.item.read,
                 deleteMsg: false
             }
-
         },
         methods: {
             //切换消息未读/已读状态
-            toggleMsgRead(event) {
-                this.read = !this.read
+            toggleMsgRead(event, status) {
+                if (status) {
+                    this.read = !!status
+                } else {
+                    this.read = !this.read
+                }
+                if (!this.item.quiet) {
+                    if (this.read) {
+                        this.$store.commit('minusNewMsg')
+                    } else {
+                        this.$store.commit('addNewMsg')
+                    }
+                }
+
                 event.target.parentNode.parentNode.firstChild.style.marginLeft = 0 + "px"
             }
         },

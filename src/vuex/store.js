@@ -5,6 +5,7 @@ Vue.use(Vuex)
     // 接口域名
 let apiPublicDomain = '//vrapi.snail.com/'
 const state = {
+    newMsgCount: 0,
     allContacts: user.users,
     currentPageName: "微信", //用于在wx-header组件中显示当前页标题
     backPageName: "返回",
@@ -25,8 +26,20 @@ const state = {
                 "newMsgCount": 1,
                 "quiet": false,
                 "msg": [{
-                    "text": 'nihao1',
-                    "date": 1488117964495
+                    "text": "点击这些白色框消息，唤醒消息操作菜单，点击这些白色框消息，唤醒消息操作菜单",
+                    "date": 1488117964495,
+                    "name": "阿荡",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                }, {
+                    "text": '点击空白处，操作菜单消失',
+                    "date": 1488117964495,
+                    "name": "阿荡",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                }, {
+                    "text": '来呀 快活啊',
+                    "date": 1488117964495,
+                    "name": "阿荡",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
                 }],
                 "user": [user.getUserInfo('wxid_zhaohd')]
             },
@@ -39,10 +52,23 @@ const state = {
                 "newMsgCount": 1,
                 "quiet": true,
                 "msg": [{
-                    "text": 'nihao2',
-                    "date": 1488117964495,
-                    "name": "阿荡"
-                }],
+                        "text": "点击消息，唤醒消息操作菜单",
+                        "date": 1488117964495,
+                        "name": "夜华",
+                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
+                    }, {
+                        "text": '点击空白处，操作菜单消失',
+                        "date": 1488117964495,
+                        "name": "阿荡",
+                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    },
+                    {
+                        "text": '我试一试',
+                        "date": 1488117964495,
+                        "name": "夜华",
+                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
+                    }
+                ],
                 "user": [user.getUserInfo('wxid_zhaohd'), user.getUserInfo('wxid_yehua')]
             },
             {
@@ -54,9 +80,10 @@ const state = {
                 "newMsgCount": 1,
                 "quiet": true,
                 "msg": [{
-                    "text": 'nihao3',
+                    "text": '冒个泡',
                     "date": 1488117964495,
-                    "name": "阿荡"
+                    "name": "诸葛亮",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg"
                 }],
                 "user": [user.getUserInfo('wxid_zhenji'), user.getUserInfo('wxid_zhugeliang'), user.getUserInfo('wxid_zhaohd')]
             },
@@ -69,9 +96,20 @@ const state = {
                 "newMsgCount": 4,
                 "quiet": false,
                 "msg": [{
-
-                    "text": 'nihao4',
-                    "date": 1488117964495
+                    "text": "点击消息，唤醒消息操作菜单",
+                    "date": 1488117964495,
+                    "name": "孙权",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                }, {
+                    "text": '点击空白处，操作菜单消失',
+                    "date": 1488117964495,
+                    "name": "孙权",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                }, {
+                    "text": '容我三思',
+                    "date": 1488117964495,
+                    "name": "孙权",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
                 }],
                 "user": [user.getUserInfo('wxid_sunquan')]
             },
@@ -84,14 +122,15 @@ const state = {
                 "newMsgCount": 4,
                 "quiet": false,
                 "msg": [{
-
-                    "text": 'nihao4',
-                    "date": 1488117964495
+                    "text": '夫君,身体要紧~ ',
+                    "date": 1488117964495,
+                    "name": "孙尚香",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg"
                 }],
                 "user": [user.getUserInfo('wxid_sunshangxiang')]
             },
             {
-                "mid": 5,
+                "mid": 6,
                 "type": "friend",
                 "group_name": "",
                 "group_qrCode": "",
@@ -99,9 +138,10 @@ const state = {
                 "newMsgCount": 4,
                 "quiet": false,
                 "msg": [{
-
-                    "text": 'nihao4',
-                    "date": 1488117964495
+                    "text": '三姓家奴！ ',
+                    "date": 1488117964495,
+                    "name": "关羽",
+                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg"
                 }],
                 "user": [user.getUserInfo('wxid_guangyu')]
             }
@@ -132,6 +172,12 @@ const mutations = {
         } else {
             state.tipsStatus = !state.tipsStatus
         }
+    },
+    addNewMsg(state) {
+        state.newMsgCount++
+    },
+    minusNewMsg(state) {
+        state.newMsgCount--
     },
     setMsgStick(state, mid) {
 
