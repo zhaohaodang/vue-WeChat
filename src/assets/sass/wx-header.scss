@@ -25,11 +25,12 @@
         cursor: pointer;
         right: 5px;
         &>span {
+            font-size: 16px;
             display: inline-block;
-            width: 40px;
         }
         .iconfont {
             font-size: 22px;
+            width: 40px;
         }
         .tips-masker {
             position: fixed;

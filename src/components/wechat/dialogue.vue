@@ -1,57 +1,56 @@
 <template>
-  <div> 
-    <section class="dialogue-section" > 
-     <div class="dialogue-section-inner" > 
-      <div class="dialogue-item dialogue-item--others" > 
-      </div> 
-      <div class="dialogue-item dialogue-item--time" > 
-      </div> 
-      <div class="dialogue-item dialogue-item--self" > 
-      </div> 
-     </div> 
-    </section> 
-    <footer class="dialogue-footer" > 
-     <div class="component-dialogue-bar-person"> 
-      <span class="iconfont icon-dialogue-jianpan" v-show="!currentChatWay" v-on:click="currentChatWay=true"></span> 
-      <span class="iconfont icon-dialogue-voice"  v-show="currentChatWay" v-on:click="currentChatWay=false"></span> 
-      <div class="chat-way" v-show="!currentChatWay"> 
-       <div class="chat-say" :class="{'say-active':sayActive}" v-press> 
-        <span class="one">按住 说话</span> 
-
-        <span class="two">松开 结束</span> 
-       </div> 
-      </div> 
-      <div class="chat-way" v-show="currentChatWay"> 
-       <input class="chat-txt" type="text" /> 
-      </div> 
-      <span class="expression iconfont icon-dialogue-smile"></span> 
-      <span class="more iconfont icon-dialogue-jia"></span> 
-      <div class="recording" style="display: none;" id="recording"> 
-       <div class="recording-voice" style="display: none;" id="recording-voice"> 
-        <div class="voice-inner"> 
-         <div class="voice-icon"></div> 
-         <div class="voice-volume"> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-          <span></span> 
-         </div> 
-        </div> 
-        <p>手指上划,取消发送</p> 
-       </div> 
-       <div class="recording-cancel" style="display: none;"> 
-        <div class="cancel-inner"></div> 
-        <p>松开手指,取消发送</p> 
-       </div> 
-      </div> 
-     </div> 
-    </footer> 
-   </div> 
+    <div>
+        <section class="dialogue-section">
+            <div class="dialogue-section-inner">
+                <div class="dialogue-item dialogue-item--others">
+                </div>
+                <div class="dialogue-item dialogue-item--time">
+                </div>
+                <div class="dialogue-item dialogue-item--self">
+                </div>
+            </div>
+        </section>
+        <footer class="dialogue-footer">
+            <div class="component-dialogue-bar-person">
+                <span class="iconfont icon-dialogue-jianpan" v-show="!currentChatWay" v-on:click="currentChatWay=true"></span>
+                <span class="iconfont icon-dialogue-voice" v-show="currentChatWay" v-on:click="currentChatWay=false"></span>
+                <div class="chat-way" v-show="!currentChatWay">
+                    <div class="chat-say" :class="{'say-active':sayActive}" v-press>
+                        <span class="one">按住 说话</span>
+                        <span class="two">松开 结束</span>
+                    </div>
+                </div>
+                <div class="chat-way" v-show="currentChatWay">
+                    <input class="chat-txt" type="text" @focus="focusIpt" />
+                </div>
+                <span class="expression iconfont icon-dialogue-smile"></span>
+                <span class="more iconfont icon-dialogue-jia"></span>
+                <div class="recording" style="display: none;" id="recording">
+                    <div class="recording-voice" style="display: none;" id="recording-voice">
+                        <div class="voice-inner">
+                            <div class="voice-icon"></div>
+                            <div class="voice-volume">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p>手指上划,取消发送</p>
+                    </div>
+                    <div class="recording-cancel" style="display: none;">
+                        <div class="cancel-inner"></div>
+                        <p>松开手指,取消发送</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </template>
 <script>
     export default {
@@ -83,7 +82,7 @@
                     //     recordingVoice = document.querySelector('.recording-voice'),
                     //     recordingCancel = document.querySelector('.recording-cancel'),
                     var startTx, startTy
-                    element.addEventListener('touchstart', function(e) {
+                    element.addEventListener('touchstart', function (e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice')
                         element.className = "chat-say say-active"
@@ -93,9 +92,8 @@
                         startTx = touches.clientX
                         startTy = touches.clientY
                         e.preventDefault()
-
                     }, false)
-                    element.addEventListener('touchend', function(e) {
+                    element.addEventListener('touchend', function (e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice'),
                             recordingCancel = document.querySelector('.recording-cancel')
@@ -104,7 +102,7 @@
                         console.log('end')
                         e.preventDefault()
                     }, false)
-                    element.addEventListener('touchmove', function(e) {
+                    element.addEventListener('touchmove', function (e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice'),
                             recordingCancel = document.querySelector('.recording-cancel')
@@ -125,11 +123,16 @@
                     }, false);
                 }
             }
-        },
-        mounted() {
-            console.log(this.msgInfo)
+        }, methods: {
+            "focusIpt"() {
+                console.log('1')
+                var interval = setInterval(function () {
+                    document.body.scrollTop = document.body.scrollHeight
+                }, 100)
+            }
         }
     }
+
 </script>
 <style>
     @import "../../assets/css/dialogue.css";

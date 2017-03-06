@@ -5,7 +5,7 @@
       <div class="weui-cells">
         <router-link to="/self/profile" class="weui-cell weui-cell_access">
           <div class="weui-cell__hd">
-            <img src="https://team.weui.io/avatar/bear.jpg" alt="" class="self-header">
+            <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="" class="self-header">
           </div>
           <div class="weui-cell__bd">
             <h4 class="self-nickname">阿荡</h4>

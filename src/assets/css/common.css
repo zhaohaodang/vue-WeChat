@@ -139,7 +139,7 @@ body {
     top: 45px;
     bottom: 0px;
     background: #eee;
-    overflow: hidden;
+    /*overflow: hidden;*/
     right: 0;
     left: 0;
     z-index: 5;
@@ -177,4 +177,20 @@ a:hover {
 
 .parentheses:after {
     content: ")";
+}
+
+.search-open-contact {
+    top: 0;
+}
+
+.search-open-contact #search {
+    margin-top: 0 !important;
+}
+
+.weui-cell__hd {
+    margin-right: 10px;
+}
+
+.weui-cell__hd img {
+    width: 40px;
 }

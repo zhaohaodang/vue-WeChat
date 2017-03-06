@@ -3,7 +3,7 @@
   <div id="contact">
     <section>
       <div class="weui-cells_contact-head weui-cells weui-cells_access" style="margin-top:-1px">
-        <router-link to="/common/profile" class="weui-cell">
+        <router-link to="/contact/new-friends" class="weui-cell">
           <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-friend-notify.png"> </div>
           <div class="weui-cell_bd weui-cell_primary">
             <p>新的朋友</p>

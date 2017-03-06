@@ -6,6 +6,7 @@
       <span class="iconfont icon-tips-jia" v-show="$route.path==='/'" v-on:click="$store.commit('toggleTipsStatus')"></span>
       <!--只在“通讯录”页显示 显示添加好友图标-->
       <span class="iconfont icon-tips-add-friend" v-show="$route.path==='/contact'"></span>
+      <span v-show="$route.path==='/contact/new-friends'">添加朋友</span>
       <span class="iconfont icon-chat-friends" v-show="$route.path==='/wechat/dialogue'"></span>
       <!-- 更多图标的菜单-->
       <ul class="tips-menu" :class="[$store.state.tipsStatus?'tips-open':'tips-close']">

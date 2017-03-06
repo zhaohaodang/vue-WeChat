@@ -6,7 +6,7 @@
         </header>
         <div class="outter" :class="{'hideLeft':$route.path.split('/').length>2}">
             <!--搜索框 只在“微信”和“通讯录”页面下显示-->
-            <search :class="{'search-open':!$store.state.headerStatus}" v-show="$route.path.indexOf('explore')===-1&&$route.path.indexOf('self')===-1"></search>
+            <search v-show="$route.path.indexOf('explore')===-1&&$route.path.indexOf('self')===-1"></search>
             <!--四个门面页 “微信” “通讯录” “发现” “我”-->
             <section class="app-content">
                 <keep-alive>

@@ -1,5 +1,5 @@
 <template>
-  <div id="search">
+  <div id="search" :class="{'search-open':!$store.state.headerStatus}">
     <div class="weui-search-bar" id="search_bar" :class="{'weui-search-bar_focusing':!$store.state.headerStatus}">
       <form class="weui-search-bar__form">
         <div class="weui-search-bar__box">
