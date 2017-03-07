@@ -5,7 +5,7 @@
       <!--只在“微信”页显示 更多图标-->
       <span class="iconfont icon-tips-jia" v-show="$route.path==='/'" v-on:click="$store.commit('toggleTipsStatus')"></span>
       <!--只在“通讯录”页显示 显示添加好友图标-->
-      <span class="iconfont icon-tips-add-friend" v-show="$route.path==='/contact'"></span>
+      <router-link tag="span" to="/contact/add-friend" class="iconfont icon-tips-add-friend" v-show="$route.path==='/contact'"></router-link>
       <span v-show="$route.path==='/contact/new-friends'">添加朋友</span>
       <span class="iconfont icon-chat-friends" v-show="$route.path==='/wechat/dialogue'"></span>
       <!-- 更多图标的菜单-->

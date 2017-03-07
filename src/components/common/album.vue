@@ -32,8 +32,8 @@
                     <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
                 </div>
                 <div class="thumb-desc">
-                    附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅附加积分覅就覅
-                    <p class="number">共9张</p>
+                    这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，
+                    <p class="number">共3张</p>
                 </div>
             </div>
         </section>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="thumb-desc">
                     附加积分覅就覅
-                    <p class="number">共9张</p>
+                    <p class="number">共2张</p>
                 </div>
             </div>
         </section>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="thumb-desc">
                     附加积分覅就覅
-                    <p class="number">共9张</p>
+                    <p class="number">共1张</p>
                 </div>
             </div>
         </section>
@@ -72,7 +72,6 @@
 </template>
 <script>
     export default {}
-
 </script>
 <style>
     @import "../../assets/css/album.css";

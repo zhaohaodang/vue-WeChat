@@ -1,31 +1,37 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import user from './user'
+import OfficialAccounts from "./official-account" //存放所有关注的公众号
+import user from './user' //存放所有好友数据
+import mutations from "./mutations"
+import actions from "./actions"
+import getters from "./getters"
 Vue.use(Vuex)
-    // 接口域名
+    // 统一管理接口域名 
 let apiPublicDomain = '//vrapi.snail.com/'
 const state = {
-    newMsgCount: 0,
-    allContacts: user.users,
+    currentLang: "zh", //当前使用的语言 zh：简体中文 en:英文 后期需要
+    newMsgCount: 0, //新消息数量
+    allContacts: user.users, //所有好友
+    OfficialAccounts: OfficialAccounts, //所有关注的公众号
     currentPageName: "微信", //用于在wx-header组件中显示当前页标题
-    backPageName: "返回",
+    //backPageName: "", //用于在返回按钮出 显示前一页名字 已遗弃
     headerStatus: true, //显示（true）/隐藏（false）wx-header组件
     tipsStatus: false, //控制首页右上角菜单的显示(true)/隐藏(false)
-    // 所有接口地址
+    // 所有接口地址 后期需要
     apiUrl: {
-
+        demo: apiPublicDomain + ""
     },
     msgList: {
-        stickMsg: [],
-        baseMsg: [{
-                "mid": 1,
+        stickMsg: [], //置顶消息列表 后期需要
+        baseMsg: [{ //普通消息列表
+                "mid": 1, //消息的id 唯一标识，重要
                 "type": "friend",
                 "group_name": "",
                 "group_qrCode": "",
-                "read": true,
+                "read": true, //true；已读 false：未读
                 "newMsgCount": 1,
-                "quiet": false,
-                "msg": [{
+                "quiet": false, // true：消息免打扰 false：提示此好友/群的新消息
+                "msg": [{ //对话框的聊天记录 新消息 push 进
                     "text": "点击这些白色框消息，唤醒消息操作菜单，点击这些白色框消息，唤醒消息操作菜单",
                     "date": 1488117964495,
                     "name": "阿荡",
@@ -41,7 +47,7 @@ const state = {
                     "name": "阿荡",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
                 }],
-                "user": [user.getUserInfo('wxid_zhaohd')]
+                "user": [user.getUserInfo('wxid_zhaohd')] // 此消息的用户数组 长度为1则为私聊 长度大于1则为群聊
             },
             {
                 "mid": 2,
@@ -147,51 +153,6 @@ const state = {
             }
         ]
     }
-}
-
-const mutations = {
-    switchLang(state, lang) {
-        state.lang = lang
-        Vue.config.lang = lang
-        document.cookie = "VR_LANG=" + lang + "; path=/;domain=.snail.com"
-        location.reload()
-        console.log(lang)
-    },
-    setPageName(state, name) {
-        state.currentPageName = name
-    },
-    setBackPageName(state, name) {
-        state.backPageName = name
-    },
-    toggleHeaderStatus(state, status) {
-        state.headerStatus = status
-    },
-    toggleTipsStatus(state, status) {
-        if (status == -1) {
-            state.tipsStatus = false
-        } else {
-            state.tipsStatus = !state.tipsStatus
-        }
-    },
-    addNewMsg(state) {
-        state.newMsgCount++
-    },
-    minusNewMsg(state) {
-        state.newMsgCount--
-    },
-    setMsgStick(state, mid) {
-
-    },
-    cancelMsgStick(state, mid) {
-
-    }
-}
-
-const actions = {
-
-}
-const getters = {
-
 }
 export default new Vuex.Store({
     state,

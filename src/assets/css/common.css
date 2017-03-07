@@ -24,8 +24,9 @@
     transition: 0.5s;
     position: absolute;
     top: 0;
+    height: 100%;
     width: 100%;
-    bottom: 0;
+    /*bottom: 0;*/
 }
 
 
@@ -43,6 +44,7 @@
     opacity: 0.75;
     transform: translate3d(-100%, 0, 0);
     transition: 1.0s;
+    overflow: hidden;
 }
 
 body {
@@ -139,6 +141,8 @@ body {
     top: 0px;
     bottom: 0px;
     background: #eee;
+    height: 100%;
+    width: 100%;
     /* overflow: hidden; */
     right: 0;
     left: 0;
@@ -193,4 +197,27 @@ a:hover {
 
 .weui-cell__hd img {
     width: 40px;
+}
+
+.gender {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-top: -5px;
+}
+
+.gender-male {
+    background: url("../../assets/images/contact_male.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+}
+
+.gender-female {
+    background: url("../../assets/images/contact_female.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
 }

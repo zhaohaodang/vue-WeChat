@@ -23,7 +23,7 @@
                     <p>名字</p>
                 </div>
                 <div class="weui-cell__ft">
-                    bear
+                    阿荡
                 </div>
             </div>
             <div class="weui-cell">
@@ -31,17 +31,17 @@
                     <p>微信号</p>
                 </div>
                 <div class="weui-cell__ft">
-                    bear
+                    10086
                 </div>
             </div>
-            <div class="weui-cell">
+            <router-link to="/self/profile/my-qrcode" class="weui-cell weui-cell_access">
                 <div class="weui-cell__bd">
                     <p>我的二维码</p>
                 </div>
                 <div class="weui-cell__ft">
-                    <i class="profile__icon-qrcode___2uQl2 profile__icon___2eco1"></i>
+                    <img src="../../assets/images/contact_add-friend-my-qr.png" style="vertical-align: middle;;width:24px" class="_align-middle">
                 </div>
-            </div>
+            </router-link>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
                     <p>我的地址</p>
@@ -106,6 +106,3 @@
         }
     }
 </script>
-<style>
-    @import "../../assets/css/wx-header.css";
-</style>

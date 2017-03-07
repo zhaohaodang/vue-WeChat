@@ -23,26 +23,26 @@
                 <div class="weui-cell__hd">
                     <img src="https://sinacloud.net/vue-wechat/images/headers/header02.png" alt=""> </div>
                 <div class="weui-cell__bd weui-cell_primary">
-                    <p><b>陌生人</b></p>
-                    <p><span>我是群聊""的</span><span>陌生人</span></p>
+                    <p><b>路飞</b></p>
+                    <p><span>来自手机通讯录</span></p>
                 </div>
                 <div class="weui-cell__ft">已添加</div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__hd">
-                    <img src="//images2015.cnblogs.com/blog/528573/201609/528573-20160922181544949-1515459394.jpg" alt=""></div>
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header02.png" alt=""></div>
                 <div class="weui-cell__bd weui-cell_primary">
-                    <p><b>陌生人</b></p>
-                    <p><span>我是群聊""的</span><span>陌生人</span></p>
+                    <p><b>娜美</b></p>
+                    <p><span>来自手机联系人</span></p>
                 </div>
                 <div class="weui-cell_ft">已拒绝</div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__hd">
-                    <img src="//images2015.cnblogs.com/blog/528573/201609/528573-20160922181544949-1515459394.jpg" alt=""></div>
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header02.png" alt=""></div>
                 <div class="weui-cell__bd weui-cell_primary">
-                    <p><b>陌生人</b></p>
-                    <p><span>我是群聊""的</span><span>陌生人</span></p>
+                    <p><b>乌索普</b></p>
+                    <p><span>来自账号查找</span></p>
                 </div>
                 <div class="weui-cell_ft"> <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">接受</a> </div>
             </div>

@@ -6,7 +6,7 @@
                 <div class="iconfont icon-return-arrow" v-on:click="$router.back()">
                     <span>返回</span>
                 </div>
-                <span>聊天信息(4)</span>
+                <span>聊天信息({{$route.query.msgInfo.user.length}})</span>
             </div>
         </header>
         <div class="member">
@@ -94,7 +94,6 @@
             }
         }
     }
-
 </script>
 <style>
     .dialogue-info {
