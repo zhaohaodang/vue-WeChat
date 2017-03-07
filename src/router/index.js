@@ -15,6 +15,20 @@ const routes = [{
         }
     },
     {
+        path: '/wechat/dialogue/dialogue-info',
+        name: "",
+        components: {
+            "subPage": resolve => require(["../components/wechat/dialogue-info.vue"], resolve)
+        }
+    },
+    {
+        path: '/wechat/dialogue/dialogue-detail',
+        name: "",
+        components: {
+            "subPage": resolve => require(["../components/wechat/dialogue-detail.vue"], resolve)
+        }
+    },
+    {
         path: '/contact/new-friends/mobile-contacts',
         name: "通讯录朋友",
         components: {
@@ -24,6 +38,14 @@ const routes = [{
         path: '/contact',
         name: "通讯录",
         component: resolve => require(["../components/contact/contact.vue"], resolve)
+    },
+    {
+        path: '/contact/group-list',
+        name: "新的朋友",
+        components: {
+            "default": resolve => require(["../components/contact/contact.vue"], resolve),
+            "subPage": resolve => require(["../components/contact/group-list.vue"], resolve)
+        }
     },
     {
         path: '/contact/new-friends',

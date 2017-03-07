@@ -1,5 +1,4 @@
-
-<template>
+<template>
   <div id="contact">
     <section>
       <div class="weui-cells_contact-head weui-cells weui-cells_access" style="margin-top:-1px">
@@ -9,12 +8,12 @@
             <p>新的朋友</p>
           </div>
         </router-link>
-        <a class="weui-cell">
+        <router-link to="/contact/group-list" class="weui-cell">
           <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-addgroup.png"> </div>
           <div class="weui-cell_bd weui-cell_primary">
             <p>群聊</p>
           </div>
-        </a>
+        </router-link>
         <a class="weui-cell">
           <div class="weui-cell_hd"> <img class="img-obj-cover" src="../../assets/images/contact_top-tag.png"> </div>
           <div class="weui-cell_bd weui-cell_primary">

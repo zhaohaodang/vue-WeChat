@@ -2,8 +2,8 @@
     <div>
         <header id="wx-header">
             <div class="other">
-                <span class="iconfont icon-chat-group" v-show="$route.query.group_num&&$route.query.group_num!=1"></span>
-                <span class="iconfont icon-chat-friends" v-show="$route.query.group_num==1"></span>
+                <router-link :to="{path:'/wechat/dialogue/dialogue-info',query: { msgInfo: msgInfo}}" tag="span" class="iconfont icon-chat-group" v-show="$route.query.group_num&&$route.query.group_num!=1"></router-link>
+                <router-link :to="{path:'/wechat/dialogue/dialogue-detail',query: { msgInfo: msgInfo}}" tag="span" class="iconfont icon-chat-friends" v-show="$route.query.group_num==1"></router-link>
             </div>
             <div class="center">
                 <router-link to="/" tag="div" class="iconfont icon-return-arrow">
@@ -97,7 +97,7 @@
                     //     recordingVoice = document.querySelector('.recording-voice'),
                     //     recordingCancel = document.querySelector('.recording-cancel'),
                     var startTx, startTy
-                    element.addEventListener('touchstart', function(e) {
+                    element.addEventListener('touchstart', function (e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice')
                         element.className = "chat-say say-active"
@@ -108,7 +108,7 @@
                         startTy = touches.clientY
                         e.preventDefault()
                     }, false)
-                    element.addEventListener('touchend', function(e) {
+                    element.addEventListener('touchend', function (e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice'),
                             recordingCancel = document.querySelector('.recording-cancel')
@@ -117,7 +117,7 @@
                         console.log('end')
                         e.preventDefault()
                     }, false)
-                    element.addEventListener('touchmove', function(e) {
+                    element.addEventListener('touchmove', function (e) {
                         var recording = document.querySelector('.recording'),
                             recordingVoice = document.querySelector('.recording-voice'),
                             recordingCancel = document.querySelector('.recording-cancel')
@@ -141,7 +141,7 @@
             more: {
                 bind(element, binding) {
                     var startTx, startTy
-                    element.addEventListener('touchstart', function(e) {
+                    element.addEventListener('touchstart', function (e) {
                         var msgMore = document.getElementById('msg-more'),
                             touches = e.changedTouches[0],
                             startTx = touches.clientX,
@@ -151,7 +151,7 @@
                         msgMore.style.display = "block"
                         e.preventDefault()
                     }, false)
-                    element.addEventListener('touchend', function(e) {
+                    element.addEventListener('touchend', function (e) {
                         e.preventDefault()
                     }, false)
                 }
@@ -160,7 +160,7 @@
         methods: {
             // 解决输入法被激活时 底部输入框被遮住问题
             focusIpt() {
-                var interval = setInterval(function() {
+                var interval = setInterval(function () {
                     document.body.scrollTop = document.body.scrollHeight
                 }, 100)
             },
@@ -175,6 +175,7 @@
             }
         }
     }
+
 </script>
 <style>
     @import "../../assets/css/dialogue.css";

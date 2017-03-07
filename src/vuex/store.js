@@ -136,7 +136,7 @@ const state = {
                 "group_qrCode": "",
                 "read": false,
                 "newMsgCount": 4,
-                "quiet": false,
+                "quiet": true,
                 "msg": [{
                     "text": '三姓家奴！ ',
                     "date": 1488117964495,
