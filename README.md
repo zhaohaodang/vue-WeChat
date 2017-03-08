@@ -46,9 +46,11 @@
 **搜素组件的动画效果**
 
 ![搜素组件的动画效果](./src/assets/images/gif/search-active.gif)
+
 **进入对话框**
 
 ![进入对话框](./src/assets/images/gif/enter-dialogue.gif)
+
 **对话框信息**
 
 ![对话框信息](./src/assets/images/gif/dialogue-operate.gif)
