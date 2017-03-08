@@ -1,7 +1,7 @@
 <template>
+    <!--我的二维码组件 利用 qrcode.min.js-->
     <div class="qrcode">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <div class="iconfont icon-return-arrow" v-on:click="$router.back()">
                     <span>返回</span>
@@ -35,7 +35,6 @@
             })
         }
     }
-
 </script>
 <style>
     .qrcode {
@@ -73,7 +72,7 @@
         display: block;
         width: 180px;
         margin: 0 auto;
-            margin-top: 48px;
+        margin-top: 48px;
     }
     
     .qrcode .desc {

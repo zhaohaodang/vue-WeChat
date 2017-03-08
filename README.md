@@ -24,20 +24,17 @@
 
 ## 桌面预览
 
-加载较快  [http://zhaohaodang.com/](http://zhaohaodang.com/) <基于阿里云虚拟机 有效期至2018-03-02>
+加载较快  [http://zhaohaodang.com/ <基于阿里云虚拟机 有效期至2018-03-02>
 
 备选 加载较慢 [https://vue2-wechat.github.io](https://vue2-wechat.github.io)
 
-桌面端浏览时，建议打开***开发者工具***，模拟手机预览
+桌面端浏览时，建议打开***开发者工具*** `F12`，模拟手机预览 `Ctrl+Shift+M` (Chrome)
 
 
 
 
 ## 动图预览
 
-**首页切换**
-
-![首页切换](./src/assets/images/gif/tab-switch.gif)
 
 **微信列表的滑动交互**
 
@@ -55,18 +52,16 @@
 
 ![对话框信息](./src/assets/images/gif/dialogue-operate.gif)
 
+**首页Tab切换**
 
-
-## 文档
-
-* vue-WeChat 说明文档参考 [Wiki](https://github.com/zhaohaodang/vue-WeChat/wiki)
-
+![首页Tab切换](./src/assets/images/gif/tab-switch.gif)
 
 
 
-## 技术
+## 技术相关
 
-每个主要的.vue和.js文件都有详细的**注释**提示，建议将仓库clone到本地，阅读源码
+* [vue-WeChat Wiki](https://github.com/zhaohaodang/vue-WeChat/wiki) 中记录了开发此项目需要的知识储备、开发思路、开发利器等。内容会不断更新，实际上想把它建成个人快速开发的代码库。
+* 每个主要的.vue和.js文件都有详细的**注释**提示，建议将仓库`clone`到本地，查看源码。 
 
 示例1( store.js 注解)
 
@@ -86,5 +81,10 @@
 
 ## 吐槽
 
-* 作者是上班族，下班时间搞这个项目，就像是在加班，能用两周时间结束第一期，也是出乎意料
-* 后期会放出适合新手练手的demo仓库，适合在此基础上进行二次开发的项目
+* 作者是上班族，下班时间搞的这个项目，简直就像是在加班 (￣_￣|||)  
+
+* 能用两周时间结束第一期，也是出乎意料，所以会有一些糟糕的使用体验，在所难免
+
+* 后期会放出适合新手练手的demo仓库，适合在此基础上进行二次开发的项目，get it !
+
+  ​

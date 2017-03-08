@@ -1,7 +1,6 @@
 <template>
     <div class="profile">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <router-link to="/contact" tag="div" class="iconfont icon-return-arrow">
                     <span>通讯录</span>
@@ -77,7 +76,7 @@
             }
         }
     }
-
 </script>
 <style>
+
 </style>

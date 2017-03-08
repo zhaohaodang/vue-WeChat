@@ -1,7 +1,7 @@
 <template>
+    <!--设置 组件-->
     <div class="setting">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <router-link to="/self" tag="div" class="iconfont icon-return-arrow">
                     <span>我</span>
@@ -48,5 +48,4 @@
 </template>
 <script>
     export default {}
-
 </script>

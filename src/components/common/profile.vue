@@ -1,7 +1,7 @@
 <template>
+<!--个人信息组件-->
     <div class="profile">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <router-link to="/self" tag="div" class="iconfont icon-return-arrow">
                     <span>我</span>
@@ -97,11 +97,6 @@
         data() {
             return {
                 pageName: "个人信息"
-            }
-        },
-        methods: {
-            goBack() {
-                this.$router.back()
             }
         }
     }

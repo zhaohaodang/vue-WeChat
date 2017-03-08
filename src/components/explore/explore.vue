@@ -1,4 +1,5 @@
 <template>
+  <!--发现组件-->
   <div id="explore">
     <section>
       <div class="weui-cells">

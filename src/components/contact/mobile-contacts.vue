@@ -1,4 +1,5 @@
 <template>
+    <!--手机联系人组件-->
     <div :class="{'search-open-contact':!$store.state.headerStatus}">
     <header id="wx-header">
             <div class="center">
@@ -8,6 +9,7 @@
                 <span>通讯录朋友</span>
             </div>
         </header>
+        <!--这里的 search 组件的样式也需要修改一下-->
         <search></search>
         <section>
             <div class="weui-cells__title">B</div>
@@ -107,5 +109,4 @@
             }
         }
     }
-
 </script>

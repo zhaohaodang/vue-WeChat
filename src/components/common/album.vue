@@ -1,7 +1,7 @@
 <template>
+<!--可复用的相册组件 这里只完成静态页面 不涉及数据-->
     <div class="album">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <router-link to="/self" tag="div" class="iconfont icon-return-arrow">
                     <span>我</span>
@@ -48,7 +48,7 @@
                      <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
                 </div>
                 <div class="thumb-desc">
-                    附加积分覅就覅
+                    装逼如风 常伴吾生
                     <p class="number">共2张</p>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
                 </div>
                 <div class="thumb-desc">
-                    附加积分覅就覅
+                    装逼如风 常伴吾生
                     <p class="number">共1张</p>
                 </div>
             </div>

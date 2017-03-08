@@ -1,7 +1,7 @@
 <template>
+    <!--朋友圈组件 后期开发的核心-->
     <div id="moments">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <router-link to="/explore" tag="div" class="iconfont icon-return-arrow">
                     <span>发现</span>
@@ -139,7 +139,6 @@
 </template>
 <script>
     export default {}
-
 </script>
 <style>
     @import "../../assets/css/moments.css";

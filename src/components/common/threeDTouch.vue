@@ -1,4 +1,5 @@
 <template>
+    <!--模拟 iOS 的 3DTouch 效果 效果不满意 未使用-->
     <div class="threeD">
         <div class="main">
             <header>收购万达讨论群</header>
@@ -26,7 +27,6 @@
     export default {
         props: ["msgInfo"]
     }
-
 </script>
 <style>
     @import "../../assets/css/threeD.css";

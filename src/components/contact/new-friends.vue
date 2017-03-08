@@ -1,4 +1,5 @@
 <template>
+    <!--新的朋友组件 交互没写完-->
     <div :class="{'search-open-contact':!$store.state.headerStatus}">
         <header id="wx-header">
             <div class="other"><span>添加朋友</span></div>
@@ -9,6 +10,7 @@
                 <span>新的朋友</span>
             </div>
         </header>
+         <!--这里的 search 组件的样式也需要修改一下-->
         <search></search>
         <div class="weui-cells margin-top-0">
             <router-link to="/contact/new-friends/mobile-contacts" tag="div" class="weui-cell">
@@ -61,7 +63,6 @@
             }
         }
     }
-
 </script>
 <style>
     @import "../../assets/css/new-friends.css";

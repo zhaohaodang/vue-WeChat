@@ -1,7 +1,7 @@
 <template>
+    <!--我的群聊组件-->
     <div :class="{'search-open-contact':!$store.state.headerStatus}">
         <header id="wx-header">
-            <!--<div class="other"><span>添加朋友</span></div>-->
             <div class="center">
                 <router-link to="/contact" tag="div" class="iconfont icon-return-arrow">
                     <span>通讯录</span>
@@ -9,6 +9,7 @@
                 <span>群聊</span>
             </div>
         </header>
+        <!--这里的 search 组件的样式需要修改一下-->
         <search></search>
         <section class="weui-cells">
             <template v-for="groupInfo in groupList">
@@ -23,8 +24,8 @@
                     </div>
                 </a>
             </template>
-        </section>
-    </div>
+</section>
+</div>
 </template>
 <script>
     import search from "../common/search"
@@ -36,7 +37,9 @@
             return {
 
             }
-        }, computed: {
+        },
+        computed: {
+            // 从消息数据中提取出群聊列表 不严谨 应该新建 groups.js，存放所有群聊数据
             groupList() {
                 var temp = []
                 for (var i in this.$store.state.msgList.baseMsg) {
@@ -48,7 +51,6 @@
             }
         }
     }
-
 </script>
 <style>
     .header-box {

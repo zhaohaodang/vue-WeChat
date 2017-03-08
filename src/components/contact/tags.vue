@@ -1,4 +1,5 @@
 <template>
+    <!--标签组件 体验挺糟糕-->
     <div>
         <header id="wx-header">
             <!--<div class="other"><span>添加朋友</span></div>-->
@@ -42,5 +43,4 @@
 </template>
 <script>
     export default {}
-
 </script>

@@ -1,4 +1,5 @@
 <template>
+    <!--公众号组件-->
     <div :class="{'search-open-contact':!$store.state.headerStatus}" class="official-account">
         <header id="wx-header">
             <div class="center">
@@ -8,6 +9,7 @@
                 <span>公众号</span>
             </div>
         </header>
+         <!--这里的 search 组件的样式也需要修改一下-->
         <search></search>
         <!--公众号集合-->
         <template v-for="(value,key) in OfficialAccountsList">
@@ -23,7 +25,7 @@
                 </div>
             </div>
         </template>
-    </div>
+</div>
 </template>
 <script>
     import search from "../common/search"
@@ -35,8 +37,10 @@
             return {
                 pageName: ""
             }
-        }, computed: {
-            initialList: function () {
+        },
+        computed: {
+            // 提取公众号首字母 排序，所有公众号被存放在 OfficialAccounts.js 中
+            initialList: function() {
                 var initialList = [],
                     OfficialAccounts = this.$store.state.OfficialAccounts,
                     max = OfficialAccounts.length
@@ -47,6 +51,7 @@
                 }
                 return initialList.sort()
             },
+            // 将公众号按照首字母分类
             OfficialAccountsList() {
                 var OfficialAccountsList = {},
                     OfficialAccounts = this.$store.state.OfficialAccounts,
@@ -65,7 +70,6 @@
         }
 
     }
-
 </script>
 <style>
     .official-account {

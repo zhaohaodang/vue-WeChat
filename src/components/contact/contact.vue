@@ -1,5 +1,4 @@
-
-<template>
+<template>
     <div id="contact">
         <section>
             <div class="weui-cells_contact-head weui-cells weui-cells_access" style="margin-top:-1px">
@@ -30,6 +29,7 @@
             </div>
             <!--联系人集合-->
             <template v-for="(value,key) in contactsList">
+                <!--首字母-->
                 <div class="weui-cells__title">{{key}}</div>
                 <div class="weui-cells">
                     <router-link :key="item.wxid" :to="{path:'/contact/details',query:{wxid:item.wxid}}" class="weui-cell weui-cell_access" v-for="item in value"
@@ -40,12 +40,13 @@
                         <div class="weui-cell__bd">
                             {{item.remark?item.remark:item.nickname}}
                         </div>
-                        </router-link>
+                    </router-link>
                 </div>
             </template>
-        </section>
-        <div class="initial-bar"><span v-for="i in initialList">{{i}}</span></div>
-    </div>
+</section>
+<!--首字母排序 后期需要实现检索功能-->
+<div class="initial-bar"><span v-for="i in initialList">{{i}}</span></div>
+</div>
 </template>
 <script>
     export default {
@@ -56,13 +57,15 @@
             }
         },
         mounted() {
+            // mutations.js中有介绍
             this.$store.commit("toggleTipsStatus", -1)
         },
         activated() {
             this.$store.commit("toggleTipsStatus", -1)
         },
         computed: {
-            initialList: function () {
+            // 从好友中提取出首字母 再排序 算法一般
+            initialList: function() {
                 var initialList = [],
                     users = this.$store.state.allContacts,
                     max = users.length
@@ -73,7 +76,8 @@
                 }
                 return initialList.sort()
             },
-            contactsList: function () {
+            // 将好友根据首字母进行分类 算法一般
+            contactsList: function() {
                 var contactsList = {},
                     users = this.$store.state.allContacts,
                     max = users.length;
@@ -93,7 +97,6 @@
 
         }
     }
-
 </script>
 <style>
     @import "../../assets/css/contact.css";
