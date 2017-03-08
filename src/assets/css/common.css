@@ -187,6 +187,10 @@ a:hover {
     top: 0;
 }
 
+.search-open-contact .search-open {
+    margin-top: -45px;
+}
+
 .search-open-contact #wx-header {
     top: -45px !important;
 }

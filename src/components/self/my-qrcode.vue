@@ -26,7 +26,7 @@
     export default {
         mounted() {
             new QRCode(document.getElementById("qrcode-pic"), {
-                text: "https://zhaohaodang.github.io/",
+                text: "https://vue2-wechat.github.io/",
                 width: 128,
                 height: 128,
                 colorDark: "#000000",
@@ -61,7 +61,7 @@
     }
     
     .qrcode #qrcode-pic {
-        background: url(http://cdn.sinacloud.net/vue-wechat/images/qrcode.jpg);
+        background: url("https://sinacloud.net/vue-wechat/images/qrcode.jpg");
         background-size: 100% 100%;
         width: 300px;
         height: 300px;

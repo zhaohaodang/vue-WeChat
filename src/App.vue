@@ -51,6 +51,9 @@
             "$route"(to, from) {
                 const toDepth = to.path.split('/').length
                 const fromDepth = from.path.split('/').length
+                if(toDepth===2){
+                     this.$store.commit("setPageName", to.name)
+                }
                 //同一级页面无需设置过渡效果
                 if (toDepth === fromDepth) {
                     return;

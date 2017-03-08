@@ -41,10 +41,10 @@ const users = [{ //昵称备注都有的朋友
         "signature": "青丘女帝，天族天妃",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
             date: 182625262
         }, {
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
             date: 182625262
         }],
         "area": ["青丘", "狐狸洞"],
@@ -64,10 +64,10 @@ const users = [{ //昵称备注都有的朋友
         "signature": "浅浅，过来",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg",
             date: 182625262
         }, {
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
             date: 182625262
         }],
         "area": ["九重天", "洗梧宫"],
@@ -88,10 +88,10 @@ const users = [{ //昵称备注都有的朋友
         "signature": "惟贤惟德，仁服于人",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg",
             date: 182625262
         }, {
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
             date: 182625262
         }],
         "area": ["蜀国", "荆州"],
@@ -112,10 +112,10 @@ const users = [{ //昵称备注都有的朋友
         "signature": "观尔乃插标卖首",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
             date: 182625262
         }, {
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
             date: 182625262
         }],
         "area": ["蜀国", "荆州"],
@@ -136,10 +136,10 @@ const users = [{ //昵称备注都有的朋友
         "signature": "你可识得此阵？",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
             date: 182625262
         }, {
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
             date: 182625262
         }],
         "area": ["蜀国", "荆州"],
@@ -160,7 +160,7 @@ const users = [{ //昵称备注都有的朋友
         "signature": "夫君,身体要紧~",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
             date: 182625262
         }],
         "area": ["吴国", "富春"],
@@ -181,7 +181,7 @@ const users = [{ //昵称备注都有的朋友
         "signature": "容我三思",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
             date: 182625262
         }],
         "area": ["吴国", "吴郡"],
@@ -202,7 +202,7 @@ const users = [{ //昵称备注都有的朋友
         "signature": "哼哼~",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg",
             date: 182625262
         }],
         "area": ["蜀", "荆州"],
@@ -222,7 +222,7 @@ const users = [{ //昵称备注都有的朋友
         "signature": "仿佛兮若轻云之蔽月",
         "telphone": 18896586152,
         "album": [{
-            imgSrc: "http://cdn.sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg",
             date: 182625262
         }],
         "area": ["魏", "荆州", "中山"],
