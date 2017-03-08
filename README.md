@@ -37,21 +37,21 @@
 
 **首页切换**
 
-![https://sinacloud.net/vue-wechat/gif/tab-switch.gif](http://cdn.sinacloud.net/vue-wechat/gif/tab-switch.gif)
+![首页切换](./src/assets/images/gif/tab-switch.gif)
 
 **微信列表的滑动交互**
 
-![消息列表滑动](http://cdn.sinacloud.net/vue-wechat/gif/msg-operate.gif)
+![微信列表的滑动交互](./src/assets/images/gif/msg-operate.gif)
 
 **搜素组件的动画效果**
 
-![https://sinacloud.net/vue-wechat/gif/search-active.gif](http://cdn.sinacloud.net/vue-wechat/gif/search-active.gif)
-进入对话框
+![搜素组件的动画效果](./src/assets/images/gif/search-active.gif)
+**进入对话框**
 
-![https://sinacloud.net/vue-wechat/gif/enter-dialogue.gif](http://cdn.sinacloud.net/vue-wechat/gif/enter-dialogue.gif)
-对话框信息
+![进入对话框](./src/assets/images/gif/enter-dialogue.gif)
+**对话框信息**
 
-![https://sinacloud.net/vue-wechat/gif/dialogue-operate.gif](http://cdn.sinacloud.net/vue-wechat/gif/dialogue-operate.gif)
+![对话框信息](./src/assets/images/gif/dialogue-operate.gif)
 
 
 
