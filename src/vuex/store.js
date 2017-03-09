@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import OfficialAccounts from "./official-account" //存放所有关注的公众号
-import user from './user' //存放所有好友数据
+import contact from './contacts' //存放所有联系人的数据
 import mutations from "./mutations"
 import actions from "./actions"
 import getters from "./getters"
@@ -11,7 +11,7 @@ let apiPublicDomain = '//vrapi.snail.com/'
 const state = {
     currentLang: "zh", //当前使用的语言 zh：简体中文 en:英文 后期需要
     newMsgCount: 0, //新消息数量
-    allContacts: user.users, //所有好友
+    allContacts: contact.contacts, //所有联系人
     OfficialAccounts: OfficialAccounts, //所有关注的公众号
     currentPageName: "微信", //用于在wx-header组件中显示当前页标题
     //backPageName: "", //用于在返回按钮出 显示前一页名字 已遗弃
@@ -47,7 +47,7 @@ const state = {
                     "name": "阿荡",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
                 }],
-                "user": [user.getUserInfo('wxid_zhaohd')] // 此消息的用户数组 长度为1则为私聊 长度大于1则为群聊
+                "user": [contact.getUserInfo('wxid_zhaohd')] // 此消息的用户数组 长度为1则为私聊 长度大于1则为群聊
             },
             {
                 "mid": 2,
@@ -75,7 +75,7 @@ const state = {
                         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
                     }
                 ],
-                "user": [user.getUserInfo('wxid_zhaohd'), user.getUserInfo('wxid_yehua')]
+                "user": [contact.getUserInfo('wxid_zhaohd'), contact.getUserInfo('wxid_yehua')]
             },
             {
                 "mid": 3,
@@ -91,7 +91,7 @@ const state = {
                     "name": "诸葛亮",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg"
                 }],
-                "user": [user.getUserInfo('wxid_zhenji'), user.getUserInfo('wxid_zhugeliang'), user.getUserInfo('wxid_zhaohd')]
+                "user": [contact.getUserInfo('wxid_zhenji'), contact.getUserInfo('wxid_zhugeliang'), contact.getUserInfo('wxid_zhaohd')]
             },
             {
                 "mid": 4,
@@ -117,7 +117,7 @@ const state = {
                     "name": "孙权",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
                 }],
-                "user": [user.getUserInfo('wxid_sunquan')]
+                "user": [contact.getUserInfo('wxid_sunquan')]
             },
             {
                 "mid": 5,
@@ -133,7 +133,7 @@ const state = {
                     "name": "孙尚香",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg"
                 }],
-                "user": [user.getUserInfo('wxid_sunshangxiang')]
+                "user": [contact.getUserInfo('wxid_sunshangxiang')]
             },
             {
                 "mid": 6,
@@ -149,7 +149,7 @@ const state = {
                     "name": "关羽",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg"
                 }],
-                "user": [user.getUserInfo('wxid_guangyu')]
+                "user": [contact.getUserInfo('wxid_guangyu')]
             }
         ]
     }

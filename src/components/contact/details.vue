@@ -63,7 +63,7 @@
     </div>
 </template>
 <script>
-    import user from "../../vuex/user"
+    import contact from "../../vuex/contacts"
     export default {
         data() {
             return {
@@ -72,7 +72,7 @@
         },
         computed: {
             userInfo() {
-                return user.getUserInfo(this.$route.query.wxid)
+                return contact.getUserInfo(this.$route.query.wxid)
             }
         }
     }

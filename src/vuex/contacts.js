@@ -12,7 +12,7 @@
  * from-来源
  * desc-描述
  */
-const users = [{ //昵称备注都有的朋友
+const contacts = [{ //昵称备注都有的朋友
         "wxid": "wxid_zhaohd",
         "initial": 'z',
         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
@@ -235,19 +235,19 @@ const users = [{ //昵称备注都有的朋友
     }
 ]
 
-const user = {
-    users
+const contact = {
+    contacts
 }
-user.getUserInfo = function(wxid) {
+contact.getUserInfo = function(wxid) {
     if (!wxid) {
         return;
     } else {
-        for (var index in users) {
-            if (users[index].wxid === wxid) {
-                return users[index]
+        for (var index in contacts) {
+            if (contacts[index].wxid === wxid) {
+                return contacts[index]
             }
         }
     }
 }
 
-export default user
+export default contact

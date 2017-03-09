@@ -45,7 +45,7 @@
             </template>
 </section>
 <!--首字母排序 后期需要实现检索功能-->
-<div class="initial-bar"><span v-for="i in initialList">{{i}}</span></div>
+<div class="initial-bar"><span v-for="i in contactsInitialList">{{i}}</span></div>
 </div>
 </template>
 <script>
@@ -64,33 +64,11 @@
             this.$store.commit("toggleTipsStatus", -1)
         },
         computed: {
-            // 从好友中提取出首字母 再排序 算法一般
-            initialList: function() {
-                var initialList = [],
-                    users = this.$store.state.allContacts,
-                    max = users.length
-                for (var i = 0; i < max; i++) {
-                    if (initialList.indexOf(users[i].initial.toUpperCase()) == -1) {
-                        initialList.push(users[i].initial.toUpperCase())
-                    }
-                }
-                return initialList.sort()
+            contactsInitialList() {
+                return this.$store.getters.contactsInitialList
             },
-            // 将好友根据首字母进行分类 算法一般
-            contactsList: function() {
-                var contactsList = {},
-                    users = this.$store.state.allContacts,
-                    max = users.length;
-                for (var i = 0; i < this.initialList.length; i++) {
-                    var protoTypeName = this.initialList[i]
-                    contactsList[protoTypeName] = []
-                    for (var j = 0; j < max; j++) {
-                        if (users[j].initial.toUpperCase() === protoTypeName) {
-                            contactsList[protoTypeName].push(users[j])
-                        }
-                    }
-                }
-                return contactsList
+            contactsList() {
+                return this.$store.getters.contactsList
             }
         },
         mounted() {

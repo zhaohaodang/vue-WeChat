@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="chat-way" v-show="currentChatWay">
-                    <input class="chat-txt" type="text" @focus="focusIpt" />
+                    <input class="chat-txt" type="text" v-on:focus="focusIpt" v-on:blur="blurIpt"/>
                 </div>
                 <span class="expression iconfont icon-dialogue-smile"></span>
                 <span class="more iconfont icon-dialogue-jia"></span>
@@ -72,7 +72,8 @@
         data() {
             return {
                 pageName: this.$route.query.name,
-                currentChatWay: true //ture为键盘打字 false为语音输入
+                currentChatWay: true, //ture为键盘打字 false为语音输入
+                timer: null
                     // sayActive: false // false 键盘打字 true 语音输入
             }
         },
@@ -164,9 +165,12 @@
         methods: {
             // 解决输入法被激活时 底部输入框被遮住问题
             focusIpt() {
-                var interval = setInterval(function() {
+                this.timer = setInterval(function() {
                     document.body.scrollTop = document.body.scrollHeight
                 }, 100)
+            },
+            blurIpt() {
+                clearInterval(this.timer)
             },
             // 点击空白区域，菜单被隐藏
             MenuOutsideClick(e) {

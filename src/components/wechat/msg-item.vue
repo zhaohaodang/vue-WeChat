@@ -3,7 +3,7 @@
     <!--进入 dialogue 页面，携带参数 mid name group_num -->
     <li :class="{'item-hide':deleteMsg}">
         <!--自定义指令 v-swiper 用于对每个消息进行滑动处理-->
-        <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="div" class="list-info" v-swiper v-on:click.native="toggleMsgRead($event,true)">
+        <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="div" class="list-info" v-swiper v-on:click.native="toggleMsgRead($event,'enter')">
             <div class="header-box">
                 <!--未读并且未屏蔽 才显示新信息数量-->
                 <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.msg.length}}</i>
@@ -31,7 +31,7 @@
         <div class="operate-box">
             <div class="operate-unread" v-if="read" v-on:click="toggleMsgRead">标为未读</div>
             <div class="operate-read" v-else v-on:click="toggleMsgRead">标为已读</div>
-            <div class="operate-del" v-on:click="deleteMsg=true">删除</div>
+            <div class="operate-del" v-on:click="deleteMsgEvent">删除</div>
         </div>
     </li>
 </template>
@@ -47,8 +47,11 @@
         methods: {
             //切换消息未读/已读状态
             toggleMsgRead(event, status) {
-                if (status) {
-                    this.read = !!status
+                if (status === 'enter') {
+                    if (this.read) {
+                        return ''
+                    }
+                    this.read = true
                 } else {
                     this.read = !this.read
                 }
@@ -61,6 +64,14 @@
                 }
 
                 event.target.parentNode.parentNode.firstChild.style.marginLeft = 0 + "px"
+            },
+            deleteMsgEvent() {
+                this.deleteMsg = true
+                if (!this.item.quiet) {
+                    if (!this.read) {
+                        this.$store.commit('minusNewMsg')
+                    }
+                }
             }
         },
         // 参考 https://vuefe.cn/v2/guide/custom-directive.html
