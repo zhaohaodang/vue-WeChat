@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <welcome></welcome>
         <div class="outter" :class="{'hideLeft':$route.path.split('/').length>2}">
             <!--通用头部-->
             <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
@@ -26,6 +27,7 @@
 </template>
 
 <script>
+    import welcome from './components/common/welcome.vue'
     import WxHeader from './components/common/wx-header'
     import WxNav from './components/common/wx-nav'
     import search from './components/common/search'
@@ -36,7 +38,8 @@
         components: {
             WxHeader,
             WxNav,
-            search
+            search,
+            welcome
         },
         data() {
             return {
