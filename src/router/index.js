@@ -16,6 +16,14 @@ const routes = [{
         }
     },
     {
+        path: '/wehchat/add-friend',
+        name: "",
+        components: {
+            "default": resolve => require(["../components/wechat/wechat.vue"], resolve),
+            "subPage": resolve => require(["../components/contact/add-friend.vue"], resolve)
+        }
+    },
+    {
         path: '/wechat/dialogue/dialogue-info',
         name: "",
         components: {
