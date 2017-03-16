@@ -27,7 +27,9 @@
             </div>
             <div class="weui-cell weui-cell_access">
                 <div class="weui-cell__bd">群二维码</div>
-                <div class="weui-cell__ft"><img class="_align-middle" style="height:24px" src="../../assets/images/chat-info-qr.png"></div>
+                <div class="weui-cell__ft">
+                    <img class="_align-middle" style="height:24px" src="../../assets/images/chat-info-qr.png">
+                </div>
             </div>
             <div class="weui-cell weui-cell_access">
                 <div class="weui-cell__bd">群公告</div>
@@ -37,7 +39,9 @@
         <div class="weui-cells">
             <div class="weui-cell weui-cell_switch">
                 <div class="weui-cell__bd">消息免打扰</div>
-                <div class="weui-cell__ft"><input type="checkbox" class="weui-switch" v-model="$route.query.msgInfo.quiet"></div>
+                <div class="weui-cell__ft">
+                    <input type="checkbox" class="weui-switch" v-model="$route.query.msgInfo.quiet">
+                </div>
             </div>
             <div class="weui-cell weui-cell_switch">
                 <div class="weui-cell__bd">置顶聊天</div>
@@ -56,7 +60,9 @@
             </div>
             <div class="weui-cell weui-cell_switch">
                 <div class="weui-cell__bd">显示成员昵称</div>
-                <div class="weui-cell__ft"><input type="checkbox" class="weui-switch" v-model="showNickname"></div>
+                <div class="weui-cell__ft">
+                    <input type="checkbox" class="weui-switch" v-model="showNickname">
+                </div>
             </div>
         </div>
         <div class="weui-cells">

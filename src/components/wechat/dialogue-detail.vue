@@ -27,7 +27,9 @@
             </div>
             <div class="weui-cell weui-cell_switch">
                 <div class="weui-cell__bd">消息免打扰</div>
-                <div class="weui-cell__ft"><input type="checkbox" class="weui-switch"v-model="$route.query.msgInfo.quiet"></div>
+                <div class="weui-cell__ft">
+                    <input type="checkbox" class="weui-switch"v-model="$route.query.msgInfo.quiet">
+                </div>
             </div>
         </div>
         <div class="weui-cells">

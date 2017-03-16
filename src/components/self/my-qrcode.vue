@@ -11,7 +11,9 @@
         </header>
         <section>
             <div class="clearfix">
-                <div class="header"><img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="" style="width:40px"></div>
+                <div class="header">
+                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="" style="width:40px">
+                </div>
                 <div class="info">
                     <p><span>阿荡</span><span class="gender gender-male"></span></p>
                     <span>江苏 苏州</span>

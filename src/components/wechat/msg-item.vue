@@ -3,7 +3,13 @@
     <!--进入 dialogue 页面，携带参数 mid name group_num -->
     <li :class="{'item-hide':deleteMsg}">
         <!--自定义指令 v-swiper 用于对每个消息进行滑动处理-->
-        <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="div" class="list-info" v-swiper v-on:click.native="toggleMsgRead($event,'enter')">
+        <router-link 
+            :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" 
+            tag="div" 
+            class="list-info" 
+            v-swiper 
+            v-on:click.native="toggleMsgRead($event,'enter')">
+
             <div class="header-box">
                 <!--未读并且未屏蔽 才显示新信息数量-->
                 <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.msg.length}}</i>
@@ -14,6 +20,7 @@
                     <img v-for="userInfo in item.user" :src="userInfo.headerUrl">
                 </div>
             </div>
+
             <div class="desc-box">
                 <!--使用过滤器 fmtDate 格式化时间-->
                 <div class="desc-time">{{item.msg[item.msg.length-1].date | fmtDate('hh:ss')}}</div>
@@ -27,6 +34,7 @@
                     <span>{{item.msg[item.msg.length-1].text}}</span>
                 </div>
             </div>
+            
         </router-link>
         <div class="operate-box">
             <div class="operate-unread" v-if="read" v-on:click="toggleMsgRead">标为未读</div>

@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         <welcome></welcome>
-        <div class="outter" :class="{'hideLeft':$route.path.split('/').length>2}">
+        <div class="outter" 
+            :class="{'hideLeft':$route.path.split('/').length>2}">
             <!--通用头部-->
             <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
                 <wx-header :pageName="pageName"></wx-header>
@@ -20,7 +21,9 @@
             </footer>
         </div>
         <!--其他店内页集合 有过渡效果-->
-        <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
+        <transition name="custom-classes-transition" 
+            :enter-active-class="enterAnimate" 
+            :leave-active-class="leaveAnimate">
             <router-view name="subPage" class="sub-page"></router-view>
         </transition>
     </div>
