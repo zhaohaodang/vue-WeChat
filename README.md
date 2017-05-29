@@ -10,7 +10,7 @@
 
 蓝色为备胎，加载较慢
 
-![https://sinacloud.net/vue-wechat/images/url-qrcode-both.jpg](https://sinacloud.net/vue-wechat/images/url-qrcode-both2.jpg)
+![https://sinacloud.net/vue-wechat/images/url-qrcode-both3.jpg](https://sinacloud.net/vue-wechat/images/url-qrcode-both3.jpg)
 
 测试机为iPhone 6s，在微信内置浏览器以及Safari、Chrome浏览器中运行良好。
 
@@ -24,7 +24,7 @@
 
 ## 桌面预览
 
-加载较快  http://zhaohaodang.com/ <基于阿里云虚拟机 有效期至2018-03-02>
+加载较快  [http://zhaohaodang.com:8888](http://zhaohaodang.com:8888)
 
 备选 加载较慢 [https://vue2-wechat.github.io](https://vue2-wechat.github.io)
 
