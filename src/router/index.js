@@ -157,7 +157,7 @@ const routes = [{
 
 ]
 export default new Router({
-    base: "/",
+    base: "/vue-wechat/",
     routes,
     // scrollBehavior(to, from, savedPosition) {
     //     if (savedPosition) {

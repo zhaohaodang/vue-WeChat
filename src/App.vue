@@ -11,7 +11,7 @@
             <!--四个门面页 “微信” “通讯录” “发现” “我”-->
             <section class="app-content">
                 <keep-alive>
-                    <router-view name="default"></router-view>
+                    <router-view name="default" ></router-view>
                 </keep-alive>
             </section>
             <!--底部导航 路由 -->
