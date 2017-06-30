@@ -93,15 +93,14 @@
         },
         directives: {
             press: {
-                bind(element, binding) {
-                    // var recording = document.querySelector('.recording'),
-                    //     recordingVoice = document.querySelector('.recording-voice'),
-                    //     recordingCancel = document.querySelector('.recording-cancel'),
-                    var startTx, startTy
+                inserted(element, binding) {
+                    var recording = document.querySelector('.recording'),
+                        recordingVoice = document.querySelector('.recording-voice'),
+                        recordingCancel = document.querySelector('.recording-cancel'),
+                        startTx, startTy;
+                    
                     element.addEventListener('touchstart', function(e) {
-                        // 为什么每次注册监听器,都要重新获取一次 DOM 像上面写就 undefine?
-                        var recording = document.querySelector('.recording'),
-                            recordingVoice = document.querySelector('.recording-voice')
+                        // 用bind时，vue还没插入到dom,故dom获取为 undefine，用 inserted 代替 bind,也可以开个0秒的定时器
                         element.className = "chat-say say-active"
                         recording.style.display = recordingVoice.style.display = "block"
                             // console.log('start')
@@ -111,31 +110,34 @@
                         e.preventDefault()
                     }, false)
                     element.addEventListener('touchend', function(e) {
-                        var recording = document.querySelector('.recording'),
-                            recordingVoice = document.querySelector('.recording-voice'),
-                            recordingCancel = document.querySelector('.recording-cancel')
+                        /*var touches = e.changedTouches[0];
+                        var distanceY = startTy - touches.clientY;
+                        if (distanceY > 50) {
+                            console.log("取消发送信息");
+                        }else{
+                            console.log("发送信息");
+                        }*/
+
                         element.className = "chat-say"
                         recordingCancel.style.display = recording.style.display = recordingVoice.style.display = "none"
                             // console.log('end')
                         e.preventDefault()
                     }, false)
                     element.addEventListener('touchmove', function(e) {
-                        var recording = document.querySelector('.recording'),
-                            recordingVoice = document.querySelector('.recording-voice'),
-                            recordingCancel = document.querySelector('.recording-cancel')
                         var touches = e.changedTouches[0],
                             endTx = touches.clientX,
                             endTy = touches.clientY,
                             distanceX = startTx - endTx,
                             distanceY = startTy - endTy;
-                        if (distanceY > 10 && distanceY < 80) {
-                            // 控制范围 和谐掉指尖抖动
+
+                        if (distanceY > 50) {
                             element.className = "chat-say"
                             recordingVoice.style.display = "none"
                             recordingCancel.style.display = "block"
-                        } else if (distanceY > 80) {
-                            element.className = "chat-say"
-                            recording.style.display = recordingCancel.style.display = "none"
+                        }else{
+                            element.className = "chat-say say-active"
+                            recordingVoice.style.display = "block"
+                            recordingCancel.style.display = "none"
                         }
                         // 阻断事件冒泡 防止页面被一同向上滑动
                         e.preventDefault()
