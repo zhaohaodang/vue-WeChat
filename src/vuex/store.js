@@ -32,7 +32,7 @@ const state = {
                 "newMsgCount": 1,
                 "quiet": false, // true：消息免打扰 false：提示此好友/群的新消息
                 "msg": [{ //对话框的聊天记录 新消息 push 进
-                    "text": "点击这些白色框消息，唤醒消息操作菜单，点击这些白色框消息，唤醒消息操作菜单",
+                    "text": "长按这些白色框消息，唤醒消息操作菜单，长按这些白色框消息，唤醒消息操作菜单",
                     "date": 1488117964495,
                     "name": "阿荡",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
@@ -58,7 +58,7 @@ const state = {
                 "newMsgCount": 1,
                 "quiet": true,
                 "msg": [{
-                        "text": "点击消息，唤醒消息操作菜单",
+                        "text": "长按消息，唤醒消息操作菜单",
                         "date": 1488117964495,
                         "name": "夜华",
                         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
@@ -102,7 +102,7 @@ const state = {
                 "newMsgCount": 4,
                 "quiet": false,
                 "msg": [{
-                    "text": "点击消息，唤醒消息操作菜单",
+                    "text": "长按消息，唤醒消息操作菜单",
                     "date": 1488117964495,
                     "name": "孙权",
                     "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
