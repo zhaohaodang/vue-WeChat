@@ -20,7 +20,7 @@ export default {
 <style>
 /* 被注释掉的样式不适合部分安卓机 */
 .welcome {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;

@@ -100,6 +100,9 @@ const routes = [{
         name: "发现",
         component: resolve => require(["../components/explore/explore.vue"], resolve)
     }, {
+        path: '/explore/moments&gid=:gid&pid=:pid',
+        redirect: '/explore/moments'
+    }, {
         path: '/explore/moments',
         name: "朋友圈",
         components: {
