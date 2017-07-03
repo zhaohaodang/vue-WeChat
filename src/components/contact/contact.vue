@@ -30,7 +30,7 @@
             <!--联系人集合-->
             <template v-for="(value,key) in contactsList">
                 <!--首字母-->
-                <div class="weui-cells__title">{{key}}</div>
+                <div :ref="`key_${key}`" class="weui-cells__title">{{key}}</div>
                 <div class="weui-cells">
                     <router-link :key="item.wxid" :to="{path:'/contact/details',query:{wxid:item.wxid}}" class="weui-cell weui-cell_access" v-for="item in value"
                         tag="div">
@@ -44,8 +44,8 @@
                 </div>
             </template>
 </section>
-<!--首字母排序 后期需要实现检索功能-->
-<div class="initial-bar"><span v-for="i in contactsInitialList">{{i}}</span></div>
+<!--检索-->
+<div class="initial-bar"><span @click="toPs(i)" v-for="i in contactsInitialList">{{i}}</span></div>
 </div>
 </template>
 <script>
@@ -73,6 +73,11 @@
         },
         mounted() {
 
+        },
+        methods: {
+            toPs(i){
+                window.scrollTo(0,this.$refs['key_'+i][0].offsetTop)
+            }
         }
     }
 </script>
