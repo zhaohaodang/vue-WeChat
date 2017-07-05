@@ -24,7 +24,7 @@
 
 ## 桌面预览
 
-加载较快  [http://zhaohaodang.com:8888](http://zhaohaodang.com:8888)
+加载较快  [http://zhaohaodang.com/vue2-wechat](http://zhaohaodang.com/vue2-wechat)
 
 备选 加载较慢 [https://vue2-wechat.github.io](https://vue2-wechat.github.io)
 
