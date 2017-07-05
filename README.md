@@ -10,7 +10,7 @@
 
 蓝色为备胎，加载较慢
 
-![https://sinacloud.net/vue-wechat/images/url-qrcode-both3.jpg](https://sinacloud.net/vue-wechat/images/url-qrcode-both3.jpg)
+![https://sinacloud.net/vue-wechat/images/url-qrcode-both3.jpg](https://sinacloud.net/vue-wechat/images/url-qrcode-both4.jpg)
 
 测试机为iPhone 6s，在微信内置浏览器以及Safari、Chrome浏览器中运行良好。
 
