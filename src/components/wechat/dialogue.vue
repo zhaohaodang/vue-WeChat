@@ -149,17 +149,29 @@
                     var startTx, startTy
                     element.addEventListener('touchstart', function(e) {
                         var msgMore = document.getElementById('msg-more'),
-                            touches = e.changedTouches[0],
-                            startTx = touches.clientX,
-                            startTy = touches.clientY
+                            touches = e.touches[0];
+                        startTx = touches.clientX
+                        startTy = touches.clientY
+                        
+                        clearTimeout(this.timer)
+                        this.timer = setTimeout(()=>{
                             // 控制菜单的位置
-                        msgMore.style.left = ((startTx - 18) > 180 ? 180 : (startTx - 18)) + 'px'
-                        msgMore.style.top = (element.offsetTop - 33) + 'px'
-                        msgMore.style.display = "block"
-                        e.preventDefault()
+                            msgMore.style.left = ((startTx - 18) > 180 ? 180 : (startTx - 18)) + 'px'
+                            msgMore.style.top = (element.offsetTop - 33) + 'px'
+                            msgMore.style.display = "block"
+                            element.style.backgroundColor = '#e5e5e5'
+                        },500)
+
+                    }, false)
+                    element.addEventListener('touchmove', function(e) {
+                        var touches = e.changedTouches[0],
+                            disY = touches.clientY;
+                        if (Math.abs(disY-startTy)>10) {
+                            clearTimeout(this.timer)
+                        }
                     }, false)
                     element.addEventListener('touchend', function(e) {
-                        e.preventDefault()
+                        clearTimeout(this.timer)
                     }, false)
                 }
             }
@@ -182,6 +194,7 @@
 
                 } else {
                     msgMore.style.display = 'none'
+                    container.forEach(item=>item.style.backgroundColor='#fff')
                 }
             }
         }

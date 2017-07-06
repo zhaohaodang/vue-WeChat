@@ -83,7 +83,11 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    -webkit-user-select: none;
+            user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
+a[href^="javascript"]{-webkit-touch-callout: none;}
 
 article,
 aside,
