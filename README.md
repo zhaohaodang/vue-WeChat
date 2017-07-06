@@ -82,3 +82,4 @@
 ## 其他
 
 * [vue-see](https://github.com/zhaohaodang/vue-see) 适用于 Vue.2x 的图片预览插件
+* 项目使用的webpack已更新到3.0版本，请安装webpack3.0，否则build失败
