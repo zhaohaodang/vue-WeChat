@@ -301,6 +301,7 @@
                         items
                     items = parseThumbnailElements(galleryElement);
                     options = {
+                        history:false,
                         galleryUID: galleryElement.getAttribute('data-pswp-uid'),
                         getThumbBoundsFn: function (index) {
                             var thumbnail = items[index].el.getElementsByTagName('img')[0], 
