@@ -8,9 +8,11 @@
 ## 手机预览
 首选红色，加载较快
 
+![https://sinacloud.net/vue-wechat/images/demo-qrcode-gitee.png](https://sinacloud.net/vue-wechat/images/demo-qrcode-gitee.png)
+
 蓝色为备胎，加载较慢
 
-![https://sinacloud.net/vue-wechat/images/url-qrcode-both3.jpg](https://sinacloud.net/vue-wechat/images/url-qrcode-both4.jpg)
+![https://sinacloud.net/vue-wechat/images/demo-qrcode-github.png](https://sinacloud.net/vue-wechat/images/demo-qrcode-github.png)
 
 测试机为iPhone 6s，在微信内置浏览器以及Safari、Chrome浏览器中运行良好。
 
@@ -24,7 +26,7 @@
 
 ## 桌面预览
 
-加载较快  [http://zhaohaodang.com/vue2-wechat](http://zhaohaodang.com/vue2-wechat)
+加载较快  [https://zhaohd.gitee.io/vue2-wechat](https://zhaohd.gitee.io/vue2-wechat)
 
 备选 加载较慢 [https://vue2-wechat.github.io](https://vue2-wechat.github.io)
 
