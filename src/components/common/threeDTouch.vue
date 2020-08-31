@@ -28,6 +28,6 @@
         props: ["msgInfo"]
     }
 </script>
-<style>
-    @import "../../assets/css/threeD.css";
+<style lang="less">
+    @import "../../assets/less/threeD.less";
 </style>

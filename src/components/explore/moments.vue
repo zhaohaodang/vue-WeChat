@@ -34,16 +34,22 @@
                 <!-- <a id="paragraphExtender" class="paragraphExtender">显示全文</a> -->
                 <!-- 相册 -->
                 <div class="thumbnails my-gallery">
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="thumbnail">
-                        <a href="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="contentUrl" data-size="400x400">
-                            <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="thumbnail" alt="Image description" />
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
+                        class="thumbnail">
+                        <a href="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="contentUrl"
+                            data-size="400x400">
+                            <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="thumbnail"
+                                alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Image 01</figcaption>
                     </figure>
 
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="thumbnail">
-                        <a href="https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg" itemprop="contentUrl" data-size="400x400">
-                            <img src="https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg" itemprop="thumbnail" alt="Image description" />
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
+                        class="thumbnail">
+                        <a href="https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg" itemprop="contentUrl"
+                            data-size="400x400">
+                            <img src="https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg" itemprop="thumbnail"
+                                alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Image 02</figcaption>
                     </figure>
@@ -60,7 +66,8 @@
                     <span id="actionToggle" class="actionToggle">..</span>
                 </div>
                 <!-- 赞／评论区 -->
-                <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span class="nickname">孙尚香</span></p>
+                <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span
+                        class="nickname">孙尚香</span></p>
             </div>
             <!-- 结束 post -->
         </div>
@@ -81,16 +88,22 @@
                 <!-- <a id="paragraphExtender" class="paragraphExtender">显示全文</a> -->
                 <!-- 相册 -->
                 <div class="thumbnails my-gallery">
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="thumbnail">
-                        <a href="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="contentUrl" data-size="400x400">
-                            <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="thumbnail" alt="Image description" />
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
+                        class="thumbnail">
+                        <a href="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="contentUrl"
+                            data-size="400x400">
+                            <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="thumbnail"
+                                alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Image 01</figcaption>
                     </figure>
 
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="thumbnail">
-                        <a href="https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg" itemprop="contentUrl" data-size="400x400">
-                            <img src="https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg" itemprop="thumbnail" alt="Image description" />
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
+                        class="thumbnail">
+                        <a href="https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg" itemprop="contentUrl"
+                            data-size="400x400">
+                            <img src="https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg"
+                                itemprop="thumbnail" alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Image 02</figcaption>
                     </figure>
@@ -107,7 +120,8 @@
                     <span id="actionToggle" class="actionToggle">..</span>
                 </div>
                 <!-- 赞／评论区 -->
-                <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span class="nickname">孙尚香</span></p>
+                <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span
+                        class="nickname">孙尚香</span></p>
             </div>
             <!-- 结束 post -->
         </div>
@@ -125,17 +139,23 @@
                 <!-- 伸张链接 -->
                 <!-- <a id="paragraphExtender" class="paragraphExtender">显示全文</a> -->
                 <!-- 相册 -->
-               <div class="thumbnails my-gallery">
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="thumbnail">
-                        <a href="https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg" itemprop="contentUrl" data-size="400x400">
-                            <img src="https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg" itemprop="thumbnail" alt="Image description" />
+                <div class="thumbnails my-gallery">
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
+                        class="thumbnail">
+                        <a href="https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg" itemprop="contentUrl"
+                            data-size="400x400">
+                            <img src="https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg" itemprop="thumbnail"
+                                alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Image 01</figcaption>
                     </figure>
 
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="thumbnail">
-                        <a href="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="contentUrl" data-size="400x400">
-                            <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="thumbnail" alt="Image description" />
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
+                        class="thumbnail">
+                        <a href="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="contentUrl"
+                            data-size="400x400">
+                            <img src="https://sinacloud.net/vue-wechat/images/headers/yehua.jpg" itemprop="thumbnail"
+                                alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Image 02</figcaption>
                     </figure>
@@ -152,7 +172,8 @@
                     <span id="actionToggle" class="actionToggle">..</span>
                 </div>
                 <!-- 赞／评论区 -->
-                <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span class="nickname">孙尚香</span></p>
+                <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span
+                        class="nickname">孙尚香</span></p>
             </div>
             <!-- 结束 post -->
         </div>
@@ -214,11 +235,11 @@
                         size,
                         item
                     for (var i = 0; i < numNodes; i++) {
-                        figureEl = thumbElements[i]; 
+                        figureEl = thumbElements[i];
                         if (figureEl.nodeType !== 1) {
                             continue
                         }
-                        linkEl = figureEl.children[0]; 
+                        linkEl = figureEl.children[0];
                         size = linkEl.getAttribute('data-size').split('x')
                         item = {
                             src: linkEl.getAttribute('href'),
@@ -228,7 +249,7 @@
                         if (figureEl.children.length > 1) {
                             item.title = figureEl.children[1].innerHTML
                         }
-                        if (linkEl.children.length > 0) {    
+                        if (linkEl.children.length > 0) {
                             item.msrc = linkEl.children[0].getAttribute('src')
                         }
                         item.el = figureEl
@@ -301,10 +322,10 @@
                         items
                     items = parseThumbnailElements(galleryElement);
                     options = {
-                        history:false,
+                        history: false,
                         galleryUID: galleryElement.getAttribute('data-pswp-uid'),
                         getThumbBoundsFn: function (index) {
-                            var thumbnail = items[index].el.getElementsByTagName('img')[0], 
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0],
                                 pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                                 rect = thumbnail.getBoundingClientRect()
                             return { x: rect.left, y: rect.top + pageYScroll, w: rect.width }
@@ -352,6 +373,6 @@
     }
 
 </script>
-<style>
-    @import "../../assets/css/moments.css";
+<style lang="less">
+    @import "../../assets/less/moments.less";
 </style>

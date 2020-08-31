@@ -44,8 +44,6 @@
             closeHeader() {
                 if (this.$store.state.headerStatus) {
                     this.$store.commit('toggleHeaderStatus', false)
-                } else {
-
                 }
             },
             // 清除输入的内容 可以直接写 v-on:click="searchIpt=''"
@@ -55,6 +53,6 @@
         }
     }
 </script>
-<style>
-    @import "../../assets/css/search.css";
+<style lang="less">
+    @import "../../assets/less/search.less";
 </style>

@@ -12,11 +12,11 @@
         <!--这里的 search 组件的样式需要修改一下-->
         <search></search>
         <section class="weui-cells">
-            <template v-for="groupInfo in groupList">
-                <a class="weui-cell weui-cell_access">
+            <template v-for="(groupInfo,index) in groupList">
+                <a class="weui-cell weui-cell_access" :key="index">
                     <div class="weui-cell__hd header-box">
                         <div class="header multi-header">
-                            <img v-for="user in groupInfo.user" :src="user.headerUrl">
+                            <img v-for="(user,index) in groupInfo.user" :key="index" :src="user.headerUrl">
                         </div>
                     </div>
                     <div class="weui-cell__bd">
@@ -24,8 +24,8 @@
                     </div>
                 </a>
             </template>
-</section>
-</div>
+        </section>
+    </div>
 </template>
 <script>
     import search from "../common/search"
@@ -60,7 +60,7 @@
         height: 38px;
         margin-right: 10px;
     }
-    
+
     .header-box .header {
         height: 100%;
         display: flex;
@@ -71,14 +71,14 @@
         overflow: hidden;
         background: #dddbdb;
     }
-    
+
     .header-box .header img {
         width: 10%;
         height: auto;
         flex-grow: 2;
         border: 0;
     }
-    
+
     .multi-header img {
         margin: 1px;
     }

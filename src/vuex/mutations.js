@@ -2,9 +2,9 @@ const mutations = {
     //切换语言 后期需要
     switchLang(state, lang) {
         state.currentLang = lang
-        Vue.config.lang = lang
+        // Vue.config.lang = lang
         document.cookie = "VR_LANG=" + lang + "; path=/;domain=.snail.com"
-            // location.reload()
+        // location.reload()
     },
     //设置当前页面名字
     setPageName(state, name) {
@@ -35,12 +35,12 @@ const mutations = {
         state.newMsgCount < 1 ? state.newMsgCount = 0 : state.newMsgCount--
     },
     //将消息置顶 待完成
-    setMsgStick(state, mid) {
+    // setMsgStick(state, mid) {
 
-    },
+    // },
     //取消置顶消息 待完成
-    cancelMsgStick(state, mid) {
+    // cancelMsgStick(state, mid) {
 
-    }
+    // }
 }
 export default mutations

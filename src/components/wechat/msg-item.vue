@@ -3,7 +3,9 @@
     <!--进入 dialogue 页面，携带参数 mid name group_num -->
     <li :class="{'item-hide':deleteMsg}">
         <!--自定义指令 v-swiper 用于对每个消息进行滑动处理-->
-        <router-link :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}" tag="div" class="list-info" v-swiper v-on:click.native="toggleMsgRead($event,'enter')">
+        <router-link
+            :to="{ path: '/wechat/dialogue', query: { mid: item.mid,name:item.group_name||(item.user[0].remark||item.user[0].nickname),group_num:item.user.length}}"
+            tag="div" class="list-info" v-swiper v-on:click.native="toggleMsgRead($event,'enter')">
             <div class="header-box">
                 <!--未读并且未屏蔽 才显示新信息数量-->
                 <i class="new-msg-count" v-show="!read&&!item.quiet">{{item.msg.length}}</i>
@@ -11,7 +13,7 @@
                 <i class="new-msg-dot" v-show="!read&&item.quiet"></i>
                 <!--如果是私聊，只显示一个头像； 如果是群聊，则显示多个头像，flex 控制样式-->
                 <div class="header" :class="[item.type=='group'?'multi-header':'']">
-                    <img v-for="userInfo in item.user" :src="userInfo.headerUrl">
+                    <img v-for="(userInfo,index) in item.user" :key="index" :src="userInfo.headerUrl">
                 </div>
             </div>
             <div class="desc-box">
@@ -77,15 +79,15 @@
         // 参考 https://vuefe.cn/v2/guide/custom-directive.html
         directives: {
             swiper: {
-                bind: function(element, binding) {
+                bind: function (element) {
                     var isTouchMove, startTx, startTy
-                    element.addEventListener('touchstart', function(e) {
+                    element.addEventListener('touchstart', function (e) {
                         var touches = e.touches[0]
                         startTx = touches.clientX
                         startTy = touches.clientY
                         isTouchMove = false;
                     }, false);
-                    element.addEventListener('touchmove', function(e) {
+                    element.addEventListener('touchmove', function (e) {
                         var touches = e.changedTouches[0],
                             endTx = touches.clientX,
                             endTy = touches.clientY,
@@ -101,7 +103,9 @@
                         } else { //左滑
                             if (Math.abs(distanceX) >= Math.abs(distanceY)) {
                                 if (distanceX < 156 && distanceX > 20) {
-                                    e.preventDefault()
+                                    if (e.cancelable) {
+                                        e.preventDefault();
+                                    }
                                     element.style.transition = "0s"
                                     element.style.marginLeft = -distanceX + "px"
                                     isTouchMove = true
@@ -110,7 +114,7 @@
                         }
                         // e.preventDefault()
                     }, false);
-                    element.addEventListener('touchend', function(e) {
+                    element.addEventListener('touchend', function (e) {
                         if (!isTouchMove) {
                             return;
                         }
@@ -118,14 +122,14 @@
                             endTx = touches.clientX,
                             endTy = touches.clientY,
                             distanceX = startTx - endTx,
-                            distanceY = startTy - endTy,
-                            isSwipe = false
+                            distanceY = startTy - endTy
+                            // isSwipe = false
                         if (Math.abs(distanceX) >= Math.abs(distanceY)) {
                             if (distanceX < 0) {
                                 return;
                             }
                             if (Math.abs(distanceX) < 60) {
-                                isSwipe = true
+                                // isSwipe = true
                                 element.style.transition = "0.3s"
                                 element.style.marginLeft = 0 + "px"
                             } else {

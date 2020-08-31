@@ -64,6 +64,6 @@
         }
     }
 </script>
-<style>
-    @import "../../assets/css/new-friends.css";
+<style lang="less">
+    @import "../../assets/less/new-friends.less";
 </style>

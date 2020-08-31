@@ -5,8 +5,8 @@ const filters = {
      * @param {String} fmtExp 时间格式 'hh:ss'
      * @returns {String} 规范后的 时间/日期 字符串
      */
-    fmtDate: function(date, fmtExp) {
-        var date = new Date(date)
+    fmtDate: function (date, fmtExp) {
+        date = new Date(date)
         var o = {
             "M+": date.getMonth() + 1, //月份
             "d+": date.getDate(), //日

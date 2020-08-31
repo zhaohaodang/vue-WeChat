@@ -44,6 +44,6 @@
         }
     }
 </script>
-<style>
-    @import "../../assets/css/wx-nav.css";
+<style lang="less">
+    @import "../../assets/less/wx-nav.less";
 </style>

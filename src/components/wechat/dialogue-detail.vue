@@ -11,9 +11,9 @@
         </header>
         <div class="member">
             <ul class="chat-dialogue-entry-collect">
-                <li v-for="item in $route.query.msgInfo.user">
+                <li v-for="(item,index) in $route.query.msgInfo.user" :key="index">
                     <div><img :src="item.headerUrl"></div>
-                    <p>{{item.remark||item.nickname}}</p> 
+                    <p>{{item.remark||item.nickname}}</p>
                 </li>
                 <li>
                     <div><span class="iconfont icon-chat-detail-add"></span></div>
@@ -27,7 +27,9 @@
             </div>
             <div class="weui-cell weui-cell_switch">
                 <div class="weui-cell__bd">消息免打扰</div>
-                <div class="weui-cell__ft"><input type="checkbox" class="weui-switch"v-model="$route.query.msgInfo.quiet"></div>
+                <div class="weui-cell__ft">
+                    <input type="checkbox" class="weui-switch" v-model="$route.query.msgInfo.quiet" />
+                </div>
             </div>
         </div>
         <div class="weui-cells">
@@ -62,7 +64,7 @@
 </template>
 <script>
     export default {
-        mounted(){
+        mounted() {
             console.log(this.$route.query.msgInfo)
         }
     }
@@ -81,7 +83,7 @@
         color: #464646;
         font-size: 14px;
     }
-    
+
     .chat-dialogue-entry-collect:before {
         content: "";
         position: absolute;
@@ -96,7 +98,7 @@
         height: 1px;
         z-index: 2;
     }
-    
+
     .chat-dialogue-entry-collect li {
         float: left;
         flex-grow: 1;
@@ -105,7 +107,7 @@
         padding: 5px 10px;
         text-align: center;
     }
-    
+
     .chat-dialogue-entry-collect li>div {
         position: relative;
         border-radius: 6px;
@@ -116,15 +118,15 @@
         background-size: cover;
         border: 1px solid #eee;
     }
-    
+
     .chat-dialogue-entry-collect li>div img {
         width: 100%;
     }
-    
+
     .chat-dialogue-entry-collect li p {
         margin-top: 5px;
     }
-    
+
     .chat-dialogue-entry-collect li .iconfont {
         font-size: 23px;
         color: #bbb;

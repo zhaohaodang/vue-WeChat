@@ -10,9 +10,11 @@
         </header>
         <div class="weui-cells">
             <div class="weui-cell">
-                <div class="weui-cell__hd"><img :src="userInfo.headerUrl" alt="" class="self-header" style="width:60px"></div>
+                <div class="weui-cell__hd"><img :src="userInfo.headerUrl" alt="" class="self-header" style="width:60px">
+                </div>
                 <div class="weui-cell__bd">
-                    <h4 class="self-nickname">{{userInfo.nickname}}<span class="gender" :class="[userInfo.sex===1?'gender-male':'gender-female']"></span></h4>
+                    <h4 class="self-nickname">{{userInfo.nickname}}<span class="gender"
+                            :class="[userInfo.sex===1?'gender-male':'gender-female']"></span></h4>
                     <p class="self-wxid" style="font-size: 13px;color: #999;">微信号: {{userInfo.wxid}}</p>
                     <p class="nickname" style="font-size: 13px;color: #999;">昵称:{{userInfo.nickname||'无'}}</p>
                 </div>
@@ -33,17 +35,18 @@
                 <div class="weui-cell__bd">
                     <p>地区</p>
                 </div>
-                <div class="weui-cell__ft" style="-webkit-flex: 4;text-align: left;">
-                    <span v-for="item in userInfo.area">{{item}}&nbsp;&nbsp;&nbsp;</span>
+                <div class="weui-cell__ft" style="flex: 4;text-align: left;">
+                    <span v-for="(item,index) in userInfo.area" :key="index">{{item}}&nbsp;&nbsp;&nbsp;</span>
                 </div>
             </div>
             <div class="weui-cell weui-cell_access">
                 <div class="weui-cell__bd">
                     <p>个人相册</p>
                 </div>
-                <div class="weui-cell__ft" style="-webkit-flex: 4;text-align: left;">
+                <div class="weui-cell__ft" style="flex: 4;text-align: left;">
                     <div class="album-list">
-                        <img :src="item.imgSrc" style="width:50px;margin:0 5px" v-for="item in userInfo.album">
+                        <img :src="item.imgSrc" style="width:50px;margin:0 5px" :key="index"
+                            v-for="(item,index) in userInfo.album">
                     </div>
                 </div>
             </div>

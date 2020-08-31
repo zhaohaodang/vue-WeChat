@@ -8,11 +8,9 @@
   </div>
 </template>
 <script>
-    import search from "../common/search"
     import msgItem from "../wechat/msg-item"
     export default {
         components: {
-            search,
             msgItem
         },
         mixins: [window.mixin],
@@ -23,6 +21,6 @@
         }
     }
 </script>
-<style>
-    @import "../../assets/css/wechat.css";
+<style lang="less">
+    @import "../../assets/less/wechat.less";
 </style>

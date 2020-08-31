@@ -14,7 +14,7 @@
                 <div class="header"><img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="" style="width:40px"></div>
                 <div class="info">
                     <p><span>阿荡</span><span class="gender gender-male"></span></p>
-                    <span>江苏 苏州</span>
+                    <span>上海 普陀</span>
                 </div>
             </div>
             <div id="qrcode-pic" class="clearfix"></div>
@@ -24,16 +24,16 @@
 </template>
 <script>
     export default {
-        mounted() {
-            new QRCode(document.getElementById("qrcode-pic"), {
-                text: "https://vue2-wechat.github.io/",
-                width: 128,
-                height: 128,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            })
-        }
+        // mounted() {
+        //     new QRCode(document.getElementById("qrcode-pic"), {
+        //         text: "https://vue2-wechat.github.io/",
+        //         width: 128,
+        //         height: 128,
+        //         colorDark: "#000000",
+        //         colorLight: "#ffffff",
+        //         correctLevel: QRCode.CorrectLevel.H
+        //     })
+        // }
     }
 </script>
 <style>

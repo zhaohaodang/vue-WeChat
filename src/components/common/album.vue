@@ -73,6 +73,6 @@
 <script>
     export default {}
 </script>
-<style>
-    @import "../../assets/css/album.css";
+<style lang="less">
+    @import "../../assets/less/album.less";
 </style>

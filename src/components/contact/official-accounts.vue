@@ -9,13 +9,13 @@
                 <span>公众号</span>
             </div>
         </header>
-         <!--这里的 search 组件的样式也需要修改一下-->
+        <!--这里的 search 组件的样式也需要修改一下-->
         <search></search>
         <!--公众号集合-->
         <template v-for="(value,key) in OfficialAccountsList">
-            <div class="weui-cells__title">{{key}}</div>
-            <div class="weui-cells">
-                <div class="weui-cell weui-cell_access" v-for="item in value">
+            <div class="weui-cells__title" :key="key">{{key}}</div>
+            <div class="weui-cells" :key="key+1">
+                <div class="weui-cell weui-cell_access" v-for="(item,index) in value" :key="index">
                     <div class="weui-cell__hd">
                         <img :src="item.headerUrl" class="home__mini-avatar___1nSrW">
                     </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </template>
-</div>
+    </div>
 </template>
 <script>
     import search from "../common/search"
@@ -40,7 +40,7 @@
         },
         computed: {
             // 提取公众号首字母 排序，所有公众号被存放在 OfficialAccounts.js 中
-            initialList: function() {
+            initialList: function () {
                 var initialList = [],
                     OfficialAccounts = this.$store.state.OfficialAccounts,
                     max = OfficialAccounts.length
@@ -75,7 +75,7 @@
     .official-account {
         padding-bottom: 20px;
     }
-    
+
     .official-account .weui-cell_access:active {
         background-color: rgba(177, 177, 177, 0.53)
     }

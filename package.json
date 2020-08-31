@@ -1,66 +1,52 @@
 {
-  "name": "vue-wechat",
-  "version": "1.0.0",
-  "description": "一款基于Vue2.0高仿微信app的单页应用/An imitation of WeChat based on the Vue2.0.js",
-  "author": "zhaohaodang@gmail.com",
+  "name": "hello-world",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
-    "vue": "^2.4.2",
-    "vue-router": "^2.7.0"
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "fastclick": "^1.0.6",
+    "photoswipe": "^4.1.3",
+    "vue": "^2.6.11",
+    "vue-axios": "^2.1.5",
+    "vue-router": "^3.4.3",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "axios": "^0.18.1",
-    "babel-core": "^6.22.1",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-stage-2": "^6.22.0",
-    "babel-register": "^6.22.0",
-    "chalk": "^2.0.1",
-    "connect-history-api-fallback": "^1.3.0",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.0",
-    "cssnano": "^3.10.0",
-    "eventsource-polyfill": "^0.9.6",
-    "express": "^4.14.1",
-    "extract-text-webpack-plugin": "^2.0.0",
-    "fastclick": "^1.0.6",
-    "file-loader": "^0.11.1",
-    "friendly-errors-webpack-plugin": "^1.1.3",
-    "html-webpack-plugin": "^2.28.0",
-    "http-proxy-middleware": "^0.17.3",
-    "opn": "^5.1.0",
-    "optimize-css-assets-webpack-plugin": "^2.0.0",
-    "ora": "^1.2.0",
-    "photoswipe": "^4.1.2",
-    "rimraf": "^2.6.0",
-    "semver": "^5.3.0",
-    "shelljs": "^0.7.6",
-    "url-loader": "^0.5.8",
-    "vue-axios": "^2.0.2",
-    "vue-loader": "^13.0.4",
-    "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.4.2",
-    "vuex": "^2.4.0",
-    "webpack": "^2.6.1",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-dev-middleware": "^1.10.0",
-    "webpack-hot-middleware": "^2.18.0",
-    "webpack-merge": "^4.1.0"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.0",
+    "vue-template-compiler": "^2.6.11"
   },
-  "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not dead"
   ]
 }
