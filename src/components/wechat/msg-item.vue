@@ -86,8 +86,9 @@
                         startTx = touches.clientX
                         startTy = touches.clientY
                         isTouchMove = false;
-                    }, false);
+                    });
                     element.addEventListener('touchmove', function (e) {
+                        e.preventDefault();
                         var touches = e.changedTouches[0],
                             endTx = touches.clientX,
                             endTy = touches.clientY,
@@ -103,17 +104,13 @@
                         } else { //左滑
                             if (Math.abs(distanceX) >= Math.abs(distanceY)) {
                                 if (distanceX < 156 && distanceX > 20) {
-                                    if (e.cancelable) {
-                                        e.preventDefault();
-                                    }
                                     element.style.transition = "0s"
                                     element.style.marginLeft = -distanceX + "px"
                                     isTouchMove = true
                                 }
                             }
                         }
-                        // e.preventDefault()
-                    }, false);
+                    }, { passive: false });
                     element.addEventListener('touchend', function (e) {
                         if (!isTouchMove) {
                             return;
@@ -123,7 +120,7 @@
                             endTy = touches.clientY,
                             distanceX = startTx - endTx,
                             distanceY = startTy - endTy
-                            // isSwipe = false
+                        // isSwipe = false
                         if (Math.abs(distanceX) >= Math.abs(distanceY)) {
                             if (distanceX < 0) {
                                 return;
@@ -137,7 +134,7 @@
                                 element.style.marginLeft = "-156px"
                             }
                         }
-                    }, false);
+                    });
                 }
             }
         }
