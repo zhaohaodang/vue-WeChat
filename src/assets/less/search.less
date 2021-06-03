@@ -1,0 +1,80 @@
+#search {
+    position: relative;
+    .weui-search-bar__label {
+        line-height: 1.8
+    }
+    &.search-open {
+        // position: absolute;
+        // top: 50px;
+        z-index: 10;
+        // bottom: 0;
+        height: 100%;
+        width: 100%;
+        // margin-top: -45px;
+        transition: 0.3s;
+        article {
+            display: block;
+        }
+    }
+    input {
+        font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    }
+    article {
+        background: #eee;
+        position: absolute;
+        height: 800px;
+        display: none;
+        z-index: 3;
+        overflow: hidden;
+        padding-top: 30px;
+        width: 100%;
+        opacity: 0.99;
+        h3 {
+            text-align: center;
+        }
+        .tag {
+            margin: 20px 0;
+            span {
+                font-size: 14px;
+                text-align: center;
+                width: 33.33%;
+                display: inline-block;
+                box-sizing: border-box;
+                color: #09bb07;
+                border-right: 1px solid rgba(220, 220, 220, 0.67);
+                margin-bottom: 15px;
+                &:nth-child(3n) {
+                    border-right-color: transparent;
+                }
+            }
+        }
+        .weui-cells {
+            background-color: transparent;
+            width: 85%;
+            margin: 0 auto;
+            .weui-cell {
+                padding: 15px;
+            }
+            .weui-cell__hd {
+                img {
+                    width: 16px;
+                }
+            }
+            .weui-cell__bd {
+                color: #999;
+                font-size: 13px;
+            }
+        }
+    }
+    .weui-search-bar__label {
+        transition: 0.3s;
+    }
+    .weui-search-bar_focusing {
+        .weui-search-bar__label {
+            // transition: 0.1s;
+            display: block;
+            transform: translate3d(-100%, 0, 0);
+            opacity: 0.0;
+        }
+    }
+}
