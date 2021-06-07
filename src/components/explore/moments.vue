@@ -29,7 +29,7 @@
                     <span>夜华</span>
                 </a>
                 <!-- post内容 -->
-                <p id="paragraph" class="paragraph">点击下方图片预览，点击下方图片预览，点击下方图片预览</p>
+                <p id="paragraph1" class="paragraph">点击下方图片预览，点击下方图片预览，点击下方图片预览</p>
                 <!-- 伸张链接 -->
                 <!-- <a id="paragraphExtender" class="paragraphExtender">显示全文</a> -->
                 <!-- 相册 -->
@@ -58,12 +58,12 @@
                 <div class="toolbar">
                     <p class="timestamp">17小时前</p>
                     <div>
-                        <div id="actionMenu" class="actionMenu slideIn">
-                            <p class="actionBtn" id="btnLike"><i class="icon icon-96"></i></p>
-                            <p class="actionBtn" id="btnComment"><i class="icon icon-3"></i></p>
+                        <div id="actionMenu1" class="actionMenu slideIn">
+                            <p class="actionBtn" id="btnLike1"><i class="icon icon-96"></i></p>
+                            <p class="actionBtn" id="btnComment1"><i class="icon icon-3"></i></p>
                         </div>
                     </div>
-                    <span id="actionToggle" class="actionToggle">..</span>
+                    <span id="actionToggle1" class="actionToggle">..</span>
                 </div>
                 <!-- 赞／评论区 -->
                 <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span
@@ -83,7 +83,7 @@
                     <span>夜华</span>
                 </a>
                 <!-- post内容 -->
-                <p id="paragraph" class="paragraph">weui目前是比较好用的ui,在微信和手机中表现非常好。weui目前是比较好用的ui,在微信和手机中表现非常好</p>
+                <p id="paragraph2" class="paragraph">weui目前是比较好用的ui,在微信和手机中表现非常好。weui目前是比较好用的ui,在微信和手机中表现非常好</p>
                 <!-- 伸张链接 -->
                 <!-- <a id="paragraphExtender" class="paragraphExtender">显示全文</a> -->
                 <!-- 相册 -->
@@ -112,12 +112,12 @@
                 <div class="toolbar">
                     <p class="timestamp">17小时前</p>
                     <div>
-                        <div id="actionMenu" class="actionMenu slideIn">
-                            <p class="actionBtn" id="btnLike"><i class="icon icon-96"></i></p>
-                            <p class="actionBtn" id="btnComment"><i class="icon icon-3"></i></p>
+                        <div id="actionMenu2" class="actionMenu slideIn">
+                            <p class="actionBtn" id="btnLike2"><i class="icon icon-96"></i></p>
+                            <p class="actionBtn" id="btnComment2"><i class="icon icon-3"></i></p>
                         </div>
                     </div>
-                    <span id="actionToggle" class="actionToggle">..</span>
+                    <span id="actionToggle2" class="actionToggle">..</span>
                 </div>
                 <!-- 赞／评论区 -->
                 <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span
@@ -135,7 +135,7 @@
                     <span>夜华</span>
                 </a>
                 <!-- post内容 -->
-                <p id="paragraph" class="paragraph">weui目前是比较好用的ui,在微信和手机中表现非常好。weui目前是比较好用的ui,在微信和手机中表现非常好</p>
+                <p id="paragraph3" class="paragraph">weui目前是比较好用的ui,在微信和手机中表现非常好。weui目前是比较好用的ui,在微信和手机中表现非常好</p>
                 <!-- 伸张链接 -->
                 <!-- <a id="paragraphExtender" class="paragraphExtender">显示全文</a> -->
                 <!-- 相册 -->
@@ -164,12 +164,12 @@
                 <div class="toolbar">
                     <p class="timestamp">17小时前</p>
                     <div>
-                        <div id="actionMenu" class="actionMenu slideIn">
-                            <p class="actionBtn" id="btnLike"><i class="icon icon-96"></i></p>
-                            <p class="actionBtn" id="btnComment"><i class="icon icon-3"></i></p>
+                        <div id="actionMenu3" class="actionMenu slideIn">
+                            <p class="actionBtn" id="btnLike3"><i class="icon icon-96"></i></p>
+                            <p class="actionBtn" id="btnComment3"><i class="icon icon-3"></i></p>
                         </div>
                     </div>
-                    <span id="actionToggle" class="actionToggle">..</span>
+                    <span id="actionToggle3" class="actionToggle">..</span>
                 </div>
                 <!-- 赞／评论区 -->
                 <p class="liketext"><i class="icon icon-96"></i><span class="nickname">夜华</span>,<span

@@ -48,6 +48,44 @@
         }
     }
 
+    .myRow {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: -10px;
+
+        .header {
+            width: 35px;
+            float: right;
+            display: block;
+        }
+
+        .text {
+            float: right;
+            /* line-height: 40px; */
+            background: #a0e75b;
+            /* display: block; */
+            padding: 8px;
+            box-sizing: border-box;
+            /* height: 40px; */
+            margin-right: 10px;
+            position: relative;
+            border-radius: 4px;
+            max-width: 80%;
+            font-size: 14px;
+
+            &:before {
+                width: 0;
+                height: 0;
+                position: absolute;
+                right: -12px;
+                top: 11px;
+                content: "";
+                border: 6px solid transparent;
+                border-left-color: #a0e75b;
+            }
+        }
+    }
+
     .msg-more {
         position: absolute;
         display: none;

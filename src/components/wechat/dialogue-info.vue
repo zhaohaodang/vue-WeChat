@@ -1,4 +1,5 @@
 <template>
+<!--  群聊详情-->
     <div class="dialogue-info">
         <header id="wx-header">
             <!--<div class="other"><span>添加朋友</span></div>-->
