@@ -86,11 +86,11 @@ export default {
     msgMid() {
       for (let i in this.$store.state.msgList.baseMsg) {
         // 不要将==改为===
-        if (this.$store.state.msgList.baseMsg[i].user.length == 1) {
-          return this.$store.state.msgList.baseMsg[i]
+        if (this.$store.state.msgList.baseMsg[i].user.length == 1 && this.$store.state.msgList.baseMsg[i].user[0] == contact.getUserInfo(this.$route.query.wxid)) {
+          return this.$store.state.msgList.baseMsg[i].mid
         }
       }
-      return {}
+      return 1
     },
     chatUrl() {
       return "?#/wechat/dialogue?mid=" + this.msgMid + "&name=" + this.userInfo.nickname + "&group_num=1"
