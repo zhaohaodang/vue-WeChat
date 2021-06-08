@@ -63,6 +63,7 @@
     </div>
 
     <a :href="chatUrl" class="weui-btn weui-btn_primary"
+       @click="addChatList"
        style="width:90%;margin-top:20px;">发消息</a>
     <a href="javascript:;" class="weui-btn weui-btn_default" style="width:90%">视频</a>
 
@@ -94,6 +95,11 @@ export default {
     },
     chatUrl() {
       return "?#/wechat/dialogue?mid=" + this.msgMid + "&name=" + this.userInfo.nickname + "&group_num=1"
+    }
+  },
+  methods: {
+    addChatList() {
+      this.$store.commit('addChatList', this.userInfo)
     }
   }
 }

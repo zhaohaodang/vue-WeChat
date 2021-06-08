@@ -12,7 +12,9 @@
  * from-来源
  * desc-描述
  */
-const contacts = [{ //昵称备注都有的朋友
+const contacts = [
+    //昵称备注都有的朋友
+    {
         "wxid": "wxid_zhaohd",
         "initial": 'z',
         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
@@ -27,9 +29,7 @@ const contacts = [{ //昵称备注都有的朋友
         "area": ["中国", "北京", "海淀"],
         "from": "",
         "tag": "",
-        "desc": {
-
-        }
+        "desc": {}
     },
     {
         "wxid": "wxid_baiqian",
@@ -238,7 +238,7 @@ const contacts = [{ //昵称备注都有的朋友
 const contact = {
     contacts
 }
-contact.getUserInfo = function(wxid) {
+contact.getUserInfo = function (wxid) {
     if (!wxid) {
         return;
     } else {
