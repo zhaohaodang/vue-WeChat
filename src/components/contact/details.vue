@@ -47,8 +47,8 @@
         </div>
         <div class="weui-cell__ft" style="flex: 4;text-align: left;">
           <div class="album-list">
-            <img :src="item.imgSrc" style="width:50px;margin:0 5px" :key="index"
-                 v-for="(item,index) in userInfo.album">
+            <img :src="item.imgSrc" style="width:50px;margin:0 5px" :key="index" alt=""
+                 v-for="(item,index) in userInfo.album" />
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
     <a :href="chatUrl" class="weui-btn weui-btn_primary"
        @click="addChatList"
        style="width:90%;margin-top:20px;">发消息</a>
-    <a href="javascript:;" class="weui-btn weui-btn_default" style="width:90%">视频</a>
+    <a href="javascript:" class="weui-btn weui-btn_default" style="width:90%">视频</a>
 
   </div>
 </template>

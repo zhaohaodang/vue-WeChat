@@ -19,19 +19,15 @@
       </div>
     </header>
     <section class="dialogue-section clearfix" v-on:click="MenuOutsideClick">
-      <!--      对方聊天信息-->
-      <div class="row clearfix" v-for="(item,index) in msgInfo.msg" :key="index">
-        <img :src="item.headerUrl" class="header">
-        <p class="text" v-more>{{ item.text }}</p>
-      </div>
-      <!--      自己聊天信息-->
-      <div id="myMsg" class="myRow clearfix" v-for="(item,index) in this.myselfChat" :key="index+300">
-        <img :src="item.headerUrl" class="header">
-        <!--        TODO 图片选择显示什么的-->
-        <p class="text" v-more>
-          {{ item.text }}
-          <img :src="item.imgUrl" v-if="item.imgUrl != null" style="width: 80%"/>
-        </p>
+<!--      双方聊天信息显示-->
+      <div class="clearfix" v-for="(item,index) in msgInfo.msg" :key="index">
+        <div :class="[item.name === 'myself' ? 'myRow clearfix' : 'row clearfix']">
+          <img :src="item.headerUrl" class="header">
+          <p class="text" v-more>
+            {{ item.text }}
+            <img :src="item.imgUrl" v-if="item.imgUrl != null" style="width: 80%"/>
+          </p>
+        </div>
       </div>
       <span class="msg-more" id="msg-more">
         <ul>
@@ -57,8 +53,12 @@
           </div>
         </div>
         <div class="chat-way" v-show="currentChatWay">
+<!--          输入框-->
           <label>
-            <input class="chat-txt" type="text" v-model="inputChat" @keyup.enter.exact="submitChat"
+            <input class="chat-txt" type="text"
+                   v-model="inputChat"
+                   @keyup.enter.exact="submitChat"
+                   @keyup.left.exact="submitOtherChat"
                    v-on:focus="focusIpt"
                    v-on:blur="blurIpt"/>
           </label>
@@ -101,6 +101,8 @@
   </div>
 </template>
 <script>
+// import contact from "@/vuex/contacts";
+
 export default {
   data() {
     return {
@@ -233,7 +235,7 @@ export default {
       if (this.isInputNull) {
         return
       }
-      this.myselfChat.push(
+      this.msgInfo.msg.push(
           //对话框的聊天记录 新消息 push 进
           {
             "text": this.inputChat,
@@ -244,19 +246,19 @@ export default {
       this.inputChat = ''
     },
     // 提交他人聊天-测试用
-    // submitOtherChat() {
-    //   this.msgInfo.msg.push(
-    //       { //对话框的聊天记录 新消息 push 进
-    //         "text": this.inputChat,
-    //         "date": 1488117964495,
-    //         "name": "阿荡",
-    //         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
-    //       })
-    //   this.inputChat = ''
-    // },
+    submitOtherChat() {
+      this.msgInfo.msg.push(
+          { //对话框的聊天记录 新消息 push 进
+            "text": this.inputChat,
+            "date": 1488117964495,
+            "name": "阿荡",
+            "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+          })
+      this.inputChat = ''
+    },
     // TODO 发送图片
     upImg() {
-      this.myselfChat.push(
+      this.msgInfo.msg.push(
           {
             "name": "myself",
             "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
