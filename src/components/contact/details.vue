@@ -63,7 +63,7 @@
     </div>
 
     <a :href="chatUrl" class="weui-btn weui-btn_primary"
-       @click="addChatList"
+       @click="checkChatList"
        style="width:90%;margin-top:20px;">发消息</a>
     <a href="javascript:" class="weui-btn weui-btn_default" style="width:90%">视频</a>
 
@@ -98,6 +98,19 @@ export default {
     }
   },
   methods: {
+    // 检查与好友是否存在聊天记录，没有则添加新的聊天，有则跳转
+    checkChatList() {
+      let isHaveChat = false
+      for(let i in this.$store.state.msgList.baseMsg) {
+        if (this.$store.state.msgList.baseMsg[i].user.length == 1 && this.$store.state.msgList.baseMsg[i].user[0] == contact.getUserInfo(this.$route.query.wxid)) {
+          isHaveChat = true
+        }
+      }
+      if(!isHaveChat) {
+        this.addChatList()
+      }
+    },
+    // 添加聊天到聊天列表
     addChatList() {
       this.$store.commit('addChatList', this.userInfo)
     }
