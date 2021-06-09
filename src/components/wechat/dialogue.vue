@@ -65,12 +65,12 @@
         </div>
 <!--        笑脸-->
         <span class="expression iconfont icon-dialogue-smile"></span>
-<!--        上传图片-->
-<!--        <span v-if="isInputNull" style="width: auto; height: auto">-->
-<!--          <input type="file" class="more iconfont icon-dialogue-jia" style="opacity: 0; margin-right: -50%">-->
-<!--          <span @click="upImg" class="more iconfont icon-dialogue-jia"></span>-->
-<!--        </span>-->
-        <span v-if="isInputNull" @click="upImg" class="more iconfont icon-dialogue-jia"></span>
+<!--        上传图片 TODO 这两个放在一起会导致加号图片无法与笑脸对齐 暂时没想出来怎么改-->
+        <span v-if="isInputNull" style="width: auto; height: auto">
+          <input type="file" class="more iconfont icon-dialogue-jia" @change="upImg" style="opacity: 0; margin-right: -50%">
+          <span class="more iconfont icon-dialogue-jia"></span>
+        </span>
+<!--        <span v-if="isInputNull" @click="upImg" class="more iconfont icon-dialogue-jia"></span>-->
         <span v-if="!isInputNull" @click="submitChat" class="weui-btn weui-btn_mini weui-btn_primary"
               style="font-size: 12px; padding: 6px 12px">发送</span>
         <div class="recording" style="display: none;" id="recording">
@@ -109,6 +109,10 @@ export default {
       // 输入框聊天内容
       inputChat: '',
       pageName: this.$route.query.name,
+      imgList:[],
+      imgData: {
+        accept: 'image/gif, image/jpeg, image/png, image/jpg',
+      },
       currentChatWay: true, //ture为键盘打字 false为语音输入
       timer: null,
       // sayActive: false // false 键盘打字 true 语音输入
@@ -256,14 +260,24 @@ export default {
           })
       this.inputChat = ''
     },
-    // TODO 发送图片
     upImg() {
+      let fileField = document.querySelector("input[type='file']")
+      let url = null
+
+      if (window.createObjectURL !== undefined) {
+        url = window.createObjectURL(fileField.files[0])
+      } else if (window.URL !== undefined) {
+        url = window.URL.createObjectURL(fileField.files[0])
+      } else if (window.webkitURL !== undefined) {
+        url = window.webkitURL.createObjectURL(fileField.files[0])
+      }
+
       this.msgInfo.msg.push(
           {
             "name": "myself",
             "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
             // 使用require防止webpack编译后地址找不到
-            "imgUrl": require("../../assets/images/me_more-my-favorites.png")
+            "imgUrl": url
           })
     },
     // 解决输入法被激活时 底部输入框被遮住问题
