@@ -4,13 +4,7 @@
 
 本项目是使用Vue.js2.0框架，搭配样式库[WeUI](https://weui.io/) ，模仿微信app的交互，做到以假乱真的效果。
 
-原项目地址 `https://github.com/zhaohaodang/vue-WeChat`
-
-新增功能：
-- 发送文字消息（回车`Enter`自己发送消息，左键 `←` 对方发送消息。方便测试）
-- 点击加号➕发送图片（固定图片，写死的。自己选择图片还没实现）
-- 聊天页面背景固定
-- 通讯录跳转聊天页面，没有在聊天列表中的会新增一个聊天页面
+项目地址 `https://github.com/zhaohaodang/vue-WeChat`
 
 ## 手机预览
 
