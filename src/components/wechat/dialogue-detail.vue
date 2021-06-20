@@ -1,4 +1,5 @@
 <template>
+<!--  一对一聊天详情-->
     <div>
         <header id="wx-header">
             <!--<div class="other"><span>添加朋友</span></div>-->

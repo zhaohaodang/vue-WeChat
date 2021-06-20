@@ -1,3 +1,5 @@
+import contact from "@/vuex/contacts";
+
 const mutations = {
     //切换语言 后期需要
     switchLang(state, lang) {
@@ -41,6 +43,27 @@ const mutations = {
     //取消置顶消息 待完成
     // cancelMsgStick(state, mid) {
 
-    // }
+    // },
+
+    // 添加聊天列表
+    addChatList(state, user) {
+        let newBaseMsg = {
+            "mid": state.msgList.baseMsg.length + 1,
+            "type": "friend",
+            "group_name": "",
+            "group_qrCode": "",
+            "read": true,
+            "newMsgCount": 1,
+            "quiet": false,
+            "msg": [{
+                "text": ' 我们现在是好友啦，发条消息吧~',
+                "date": new Date(),
+                "name": user.nickname,
+                "headerUrl": user.headerUrl
+            }],
+            "user": [contact.getUserInfo(user.wxid)]
+        }
+        state.msgList.baseMsg.push(newBaseMsg)
+    }
 }
 export default mutations

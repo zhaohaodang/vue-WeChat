@@ -2,7 +2,7 @@
 
 ## 概述
 
-本项目是使用Vue.js2.0框架，搭配样式库[WeUI](https://weui.io/)，模仿微信app的交互，做到以假乱真的效果。
+本项目是使用Vue.js2.0框架，搭配样式库[WeUI](https://weui.io/) ，模仿微信app的交互，做到以假乱真的效果。
 
 项目地址 `https://github.com/zhaohaodang/vue-WeChat`
 

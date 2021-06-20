@@ -6,7 +6,7 @@ import mutations from "./mutations"
 import actions from "./actions"
 import getters from "./getters"
 Vue.use(Vuex)
-    // 统一管理接口域名 
+    // 统一管理接口域名
 let apiPublicDomain = '//vrapi.snail.com/'
 const state = {
     currentLang: "zh", //当前使用的语言 zh：简体中文 en:英文 后期需要
