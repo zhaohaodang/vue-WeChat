@@ -19,7 +19,7 @@
       </div>
     </header>
     <section class="dialogue-section clearfix" v-on:click="MenuOutsideClick">
-添加      <!--      双方聊天信息显示-->
+      <!--      双方聊天信息显示-->
       <div class="clearfix" v-for="(item,index) in msgInfo.msg" :key="index">
         <div :class="[item.name === 'myself' ? 'myRow clearfix' : 'row clearfix']">
           <img :src="item.headerUrl" class="header">
