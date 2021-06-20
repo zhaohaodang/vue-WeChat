@@ -37,8 +37,6 @@
           <li>删除</li>
         </ul>
       </span>
-      <!--      占位置，防止图片或文字被footer遮挡-->
-      <div class="clearfix" style="height: 80px; background-color: transparent"></div>
     </section>
     <footer class="dialogue-footer">
       <div class="component-dialogue-bar-person">
@@ -66,7 +64,7 @@
         <!--        笑脸-->
         <span class="expression iconfont icon-dialogue-smile"></span>
         <!--        上传图片 TODO 这两个放在一起会导致加号图片无法与笑脸对齐 暂时没想出来怎么改-->
-        <span v-if="isInputNull" style="width: auto; height: auto">
+        <span v-if="isInputNull" style="width: 80px; height: 40px;">
           <input type="file" class="more iconfont icon-dialogue-jia" @change="upImg"
                  style="opacity: 0; margin-right: -50%">
           <span class="more iconfont icon-dialogue-jia"></span>
@@ -233,7 +231,7 @@ export default {
       }
       this.msgInfo.msg.push({
         "text": this.inputChat,
-        "date": 1488117964495,
+        "date": new Date(),
         "name": "myself",
         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
       })
@@ -241,11 +239,14 @@ export default {
     },
     // 提交他人聊天-测试用
     submitOtherChat() {
+      if (this.isInputNull) {
+        return
+      }
       this.msgInfo.msg.push({ //对话框的聊天记录 新消息 push 进
         "text": this.inputChat,
-        "date": 1488117964495,
-        "name": "阿荡",
-        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+        "date": new Date(),
+        "name": this.msgInfo.user[0].nickname,
+        "headerUrl": this.msgInfo.user[0].headerUrl
       })
       this.inputChat = ''
     },
@@ -265,7 +266,6 @@ export default {
       this.msgInfo.msg.push({
         "name": "myself",
         "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
-        // 使用require防止webpack编译后地址找不到
         "imgUrl": url
       })
     },
