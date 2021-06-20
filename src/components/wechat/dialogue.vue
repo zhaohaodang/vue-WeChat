@@ -63,13 +63,12 @@
         </div>
         <!--        笑脸-->
         <span class="expression iconfont icon-dialogue-smile"></span>
-        <!--        上传图片 TODO 这两个放在一起会导致加号图片无法与笑脸对齐 暂时没想出来怎么改-->
-        <span v-if="isInputNull" style="width: 80px; height: 40px;">
+        <!--        上传图片-->
+        <span v-if="isInputNull" style="width: 40px">
+          <span class="more iconfont icon-dialogue-jia" style="width: 40px; position: absolute"></span>
           <input type="file" class="more iconfont icon-dialogue-jia" @change="upImg"
-                 style="opacity: 0; margin-right: -50%">
-          <span class="more iconfont icon-dialogue-jia"></span>
+                 style="opacity: 0; height: 40px; position: absolute;">
         </span>
-        <!--        <span v-if="isInputNull" @click="upImg" class="more iconfont icon-dialogue-jia"></span>-->
         <span v-if="!isInputNull" @click="submitChat" class="weui-btn weui-btn_mini weui-btn_primary"
               style="font-size: 12px; padding: 6px 12px">发送</span>
         <div class="recording" style="display: none;" id="recording">
