@@ -15,13 +15,13 @@
         </router-link>
 		<router-link to="/explore" tag="dl">
             <dt class="iconfont icon-find" >
-                <i class="new-msg-dot"></i>
+                <i class="new-msg-dot" v-if="$store.state.momentNewMsgCount"></i>
             </dt>
             <dd>发现</dd>
         </router-link>
 		<router-link to="/self" tag="dl">
             <dt class="iconfont icon-me" >
-                <!--<i class="new-msg-dot"></i>-->
+                <!-- <i class="new-msg-dot"></i> -->
             </dt>
             <dd>我</dd>
         </router-link>
@@ -41,6 +41,7 @@
                     this.$store.commit('addNewMsg',this.$store.state.msgList.baseMsg[i].newMsgCount)
                 }
             }
+            console.log(this.$store.state.momentNewMsgCount)
         }
     }
 </script>

@@ -369,6 +369,7 @@
         },
         mounted() {
             this.initPhotoSwipeFromDOM('.my-gallery')
+            this.$store.commit('clearMomentMsg')
         }
     }
 

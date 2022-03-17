@@ -17,6 +17,7 @@ const state = {
     //backPageName: "", //用于在返回按钮出 显示前一页名字 已遗弃
     headerStatus: true, //显示（true）/隐藏（false）wx-header组件
     tipsStatus: false, //控制首页右上角菜单的显示(true)/隐藏(false)
+    momentNewMsgCount:1, //朋友圈新消息
     // 所有接口地址 后期需要
     apiUrl: {
         demo: apiPublicDomain + ""

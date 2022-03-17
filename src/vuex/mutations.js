@@ -34,6 +34,14 @@ const mutations = {
     minusNewMsg(state,newMsgCount) {
         state.newMsgCount < 1 ? state.newMsgCount = 0 : state.newMsgCount-=newMsgCount
     },
+    //增加朋友圈消息未读数
+    addMomentMsg(state) {
+        state.momentNewMsgCount+= 1
+    },
+    //清零朋友圈消息未读数
+    clearMomentMsg(state) {
+        state.momentNewMsgCount = 0
+    }
     //将消息置顶 待完成
     // setMsgStick(state, mid) {
 
