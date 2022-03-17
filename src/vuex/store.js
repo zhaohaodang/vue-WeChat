@@ -99,7 +99,7 @@ const state = {
                 "group_name": "",
                 "group_qrCode": "",
                 "read": false,
-                "newMsgCount": 4,
+                "newMsgCount": 2,
                 "quiet": false,
                 "msg": [{
                     "text": "长按消息，唤醒消息操作菜单",
@@ -125,7 +125,7 @@ const state = {
                 "group_name": "",
                 "group_qrCode": "",
                 "read": false,
-                "newMsgCount": 4,
+                "newMsgCount": 1,
                 "quiet": false,
                 "msg": [{
                     "text": '夫君,身体要紧~ ',
@@ -141,7 +141,7 @@ const state = {
                 "group_name": "",
                 "group_qrCode": "",
                 "read": false,
-                "newMsgCount": 4,
+                "newMsgCount": 1,
                 "quiet": true,
                 "msg": [{
                     "text": '三姓家奴！ ',

@@ -38,7 +38,7 @@
         mounted() {
             for (var i in this.$store.state.msgList.baseMsg) {
                 if (this.$store.state.msgList.baseMsg[i].read === false && this.$store.state.msgList.baseMsg[i].quiet === false) {
-                    this.$store.commit('addNewMsg')
+                    this.$store.commit('addNewMsg',this.$store.state.msgList.baseMsg[i].newMsgCount)
                 }
             }
         }

@@ -27,12 +27,12 @@ const mutations = {
         }
     },
     //增加未读消息数
-    addNewMsg(state) {
-        state.newMsgCount > 99 ? state.newMsgCount = "99+" : state.newMsgCount++
+    addNewMsg(state,newMsgCount) {
+        state.newMsgCount > 99 ? state.newMsgCount = "99+" : state.newMsgCount+=newMsgCount
     },
     //减少未读消息数
-    minusNewMsg(state) {
-        state.newMsgCount < 1 ? state.newMsgCount = 0 : state.newMsgCount--
+    minusNewMsg(state,newMsgCount) {
+        state.newMsgCount < 1 ? state.newMsgCount = 0 : state.newMsgCount-=newMsgCount
     },
     //将消息置顶 待完成
     // setMsgStick(state, mid) {
