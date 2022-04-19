@@ -13,7 +13,7 @@
             <div class="home-pic-base">
                 <div class="top-pic">
                     <div class="top-pic-inner">
-                        <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png">
+                        <img src="/images/header/header01.png">
                     </div>
                 </div>
                 <div class="top-name _ellipsis">阿荡</div>
@@ -27,9 +27,9 @@
             </div>
             <div class="post-content">
                 <div class="tumb-box">
-                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
-                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
-                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                    <img src="/images/header/header01.png" alt="">
+                    <img src="/images/header/header01.png" alt="">
+                    <img src="/images/header/header01.png" alt="">
                 </div>
                 <div class="thumb-desc">
                     这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，这里字比较多，
@@ -44,8 +44,8 @@
             </div>
             <div class="post-content">
                 <div class="tumb-box">
-                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
-                     <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                    <img src="/images/header/header01.png" alt="">
+                     <img src="/images/header/header01.png" alt="">
                 </div>
                 <div class="thumb-desc">
                     装逼如风 常伴吾生
@@ -60,7 +60,7 @@
             </div>
             <div class="post-content">
                 <div class="tumb-box">
-                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" alt="">
+                    <img src="/images/header/header01.png" alt="">
                 </div>
                 <div class="thumb-desc">
                     装逼如风 常伴吾生

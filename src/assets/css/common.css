@@ -214,14 +214,14 @@ a:hover {
 }
 
 .gender-male {
-    background: url("../../assets/images/contact_male.png");
+    background: url("/images/contact_male.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50%;
 }
 
 .gender-female {
-    background: url("../../assets/images/contact_female.png");
+    background: url("/images/contact_female.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50%;

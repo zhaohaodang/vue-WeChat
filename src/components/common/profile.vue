@@ -15,7 +15,7 @@
                     <p>头像</p>
                 </div>
                 <div class="weui-cell__ft">
-                    <img src="https://sinacloud.net/vue-wechat/images/headers/header01.png" style="width: 50px;height: 50px;border-radius: 4px;">
+                    <img src="/images/header/header01.png" style="width: 50px;height: 50px;border-radius: 4px;">
                 </div>
             </div>
             <div class="weui-cell">
@@ -39,7 +39,7 @@
                     <p>我的二维码</p>
                 </div>
                 <div class="weui-cell__ft">
-                    <img src="../../assets/images/contact_add-friend-my-qr.png" style="vertical-align: middle;;width:24px" class="_align-middle">
+                    <img src="/images/contact_add-friend-my-qr.png" style="vertical-align: middle;;width:24px" class="_align-middle">
                 </div>
             </router-link>
             <div class="weui-cell">

@@ -10,13 +10,12 @@
 
 首选红色，加载较快
 
-![https://sinacloud.net/vue-wechat/images/demo-qrcode-gitee.png](https://sinacloud.net/vue-wechat/images/demo-qrcode-gitee.png)
+![./public/images/demo-qrcode-gitee.png](./public/images/demo-qrcode-gitee.png)
 
 蓝色为备用地址，加载较慢
 
-![https://sinacloud.net/vue-wechat/images/demo-qrcode-github.png](https://sinacloud.net/vue-wechat/images/demo-qrcode-github.png)
+![./public/images/demo-qrcode-github.png](./public/images/demo-qrcode-github.png)
 
-测试机为iPhone 6s，在微信内置浏览器以及Safari、Chrome浏览器中运行良好。
 
 如果你觉得不错想给作者**点个赞**，可以给项目增加一个 Star ★，项目会被收录在 Your stars 中，方便日后查看。
 
@@ -60,36 +59,28 @@ npm run serve
 
 **微信列表的滑动交互**
 
-![微信列表的滑动交互](./src/assets/images/gif/msg-operate.gif)
+![微信列表的滑动交互](./public/images/gif/msg-operate.gif)
 
 **搜素组件的动画效果**
 
-![搜素组件的动画效果](./src/assets/images/gif/search-active.gif)
+![搜素组件的动画效果](./public/images/gif/search-active.gif)
 
 **进入对话框**
 
-![进入对话框](./src/assets/images/gif/enter-dialogue.gif)
+![进入对话框](./public/images/gif/enter-dialogue.gif)
 
 **对话框信息**
 
-![对话框信息](./src/assets/images/gif/dialogue-operate.gif)
+![对话框信息](./public/images/gif/dialogue-operate.gif)
 
 **首页Tab切换**
 
-![首页Tab切换](./src/assets/images/gif/tab-switch.gif)
+![首页Tab切换](./public/images/gif/tab-switch.gif)
 
 ## 技术相关
 
 * [vue-WeChat Wiki](https://github.com/zhaohaodang/vue-WeChat/wiki) 中记录了开发此项目需要的知识储备、开发思路、开发利器等。
 * 每个主要的.vue和.js文件都有详细的**注释**提示，建议将仓库 `clone` 到本地，查看源码。 
-
-示例1( store.js 注解)
-
-![store.js文件注解](https://sinacloud.net/vue-wechat/images/screenshot/code-screenshot01.jpg)
-
-示例2( App.vue 注解)
-
-![App.vue 注解](https://sinacloud.net/vue-wechat/images/screenshot/code-screenshot02.jpg)
 
 ## 问题反馈
 

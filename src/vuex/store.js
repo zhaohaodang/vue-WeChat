@@ -35,17 +35,17 @@ const state = {
                     "text": "长按这些白色框消息，唤醒消息操作菜单，长按这些白色框消息，唤醒消息操作菜单",
                     "date": 1488117964495,
                     "name": "阿荡",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    "headerUrl": "/images/header/header01.png"
                 }, {
                     "text": '点击空白处，操作菜单消失',
                     "date": 1488117964495,
                     "name": "阿荡",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    "headerUrl": "/images/header/header01.png"
                 }, {
                     "text": '来呀 快活啊',
                     "date": 1488117964495,
                     "name": "阿荡",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    "headerUrl": "/images/header/header01.png"
                 }],
                 "user": [contact.getUserInfo('wxid_zhaohd')] // 此消息的用户数组 长度为1则为私聊 长度大于1则为群聊
             },
@@ -61,18 +61,18 @@ const state = {
                         "text": "长按消息，唤醒消息操作菜单",
                         "date": 1488117964495,
                         "name": "夜华",
-                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
+                        "headerUrl": "/images/header/yehua.jpg"
                     }, {
                         "text": '点击空白处，操作菜单消失',
                         "date": 1488117964495,
                         "name": "阿荡",
-                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                        "headerUrl": "/images/header/header01.png"
                     },
                     {
                         "text": '我试一试',
                         "date": 1488117964495,
                         "name": "夜华",
-                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
+                        "headerUrl": "/images/header/yehua.jpg"
                     }
                 ],
                 "user": [contact.getUserInfo('wxid_zhaohd'), contact.getUserInfo('wxid_yehua')]
@@ -89,7 +89,7 @@ const state = {
                     "text": '冒个泡',
                     "date": 1488117964495,
                     "name": "诸葛亮",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg"
+                    "headerUrl": "/images/header/zhugeliang.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_zhenji'), contact.getUserInfo('wxid_zhugeliang'), contact.getUserInfo('wxid_zhaohd')]
             },
@@ -105,17 +105,17 @@ const state = {
                     "text": "长按消息，唤醒消息操作菜单",
                     "date": 1488117964495,
                     "name": "孙权",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                    "headerUrl": "/images/header/sunquan.jpg"
                 }, {
                     "text": '点击空白处，操作菜单消失',
                     "date": 1488117964495,
                     "name": "孙权",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                    "headerUrl": "/images/header/sunquan.jpg"
                 }, {
                     "text": '容我三思',
                     "date": 1488117964495,
                     "name": "孙权",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                    "headerUrl": "/images/header/sunquan.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_sunquan')]
             },
@@ -131,7 +131,7 @@ const state = {
                     "text": '夫君,身体要紧~ ',
                     "date": 1488117964495,
                     "name": "孙尚香",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg"
+                    "headerUrl": "/images/header/sunshangxiang.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_sunshangxiang')]
             },
@@ -147,7 +147,7 @@ const state = {
                     "text": '三姓家奴！ ',
                     "date": 1488117964495,
                     "name": "关羽",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg"
+                    "headerUrl": "/images/header/guangyu.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_guangyu')]
             }

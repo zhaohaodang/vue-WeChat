@@ -28,7 +28,7 @@
             <div class="weui-cell weui-cell_access">
                 <div class="weui-cell__bd">群二维码</div>
                 <div class="weui-cell__ft"><img class="_align-middle" style="height:24px"
-                        src="../../assets/images/chat-info-qr.png"></div>
+                        src="/images/chat-info-qr.png"></div>
             </div>
             <div class="weui-cell weui-cell_access">
                 <div class="weui-cell__bd">群公告</div>
