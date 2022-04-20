@@ -6,9 +6,7 @@
 
 项目地址 `https://github.com/zhaohaodang/vue-WeChat`
 
-## 手机预览
-
-首选红色，加载较快
+## 扫码体验
 
 ![https://vue-wechat-6gf4n43f268f8b05-1251265717.ap-shanghai.app.tcloudbase.com](./public/images/qrcode_vue-wechat.png "https://vue-wechat-6gf4n43f268f8b05-1251265717.ap-shanghai.app.tcloudbase.com/#/")
 
